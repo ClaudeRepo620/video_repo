@@ -2,7 +2,7 @@
 
 # Viral Video Factory: runbook for each automatic run
 
-Every run makes ONE finished Turkish short (**Rota 360 and Kokpit 360: 20-30 s, hard cap 35 s** — the user's rule since 2026-11-23; Ayet ve Bilim keeps its own length; 9:16, 3D, motion graphics, subtitles, Google TTS voice, sound designed in code), adds it to the panel, and stops. Twice a day. Everything is free: no paid servers, no AI image or video credits.
+Every run makes ONE finished Turkish short (**Rota 360: 20-30 s · Kokpit 360: 25-35 s, hard cap 35 s** — the user's rules since 2026-11-23; Ayet ve Bilim keeps its own length; 9:16, 3D, motion graphics, subtitles, Google TTS voice, sound designed in code), adds it to the panel, and stops. Twice a day. Everything is free: no paid servers, no AI image or video credits.
 
 **ENGINE FILES COME FROM GITHUB, NOT THE PANEL (the user's token rule since 2026-11-23).** All engine files live in the public repo `ClaudeRepo620/video_repo` under `engine/`. Download them as FILES with curl — never read a bundle into the chat (it is 140-180 KB; just run it):
 `mkdir -p ~/eng && cd ~/eng && for f in RUNBOOK.txt RUNBOOK_KOKPIT.txt RUNBOOK_AYET.txt PLAYBOOK.txt bundle.sh kokpit_bundle.sh ayet_bundle.sh finish_audio.sh thumb.py ayet_topics.json; do curl -fsSL -o $f https://raw.githubusercontent.com/ClaudeRepo620/video_repo/main/engine/$f || echo FAIL $f; done`
@@ -23,7 +23,7 @@ Niche: **merak uyandıran bilgi videoları** (world, travel, nature, space, hist
 Brainstorm 10 ideas. Score each 1-5 on: **hook** (does the first sentence stop the scroll?), **curiosity gap** (is there a reveal people wait for?), **3D potential** (can it be shown beautifully with code-built scenes?), **comment bait** (will people argue, guess or share their pick?), **Turkish relevance** (a Turkish angle or Turkish place helps). Make the highest total. Write the 10 with scores into the run log.
 Rotate formats: countdown top-N (with #1 held to the end), quiz/tahmin ("3 saniyen var"), myth vs fact ("herkes yanlış biliyor"), comparison/scale ("Everest okyanusa girse"), "what if" (… olsaydı ne olurdu?), hidden place reveal.
 
-## 2. Script (Turkish, 55-80 words ≈ 20-30 s for Rota 360 and Kokpit 360 — PLAYBOOK 4a; never pad, never speed the voice up)
+## 2. Script (Turkish, Rota 360: 55-80 words ≈ 20-30 s · Kokpit 360: 70-95 words ≈ 25-35 s — PLAYBOOK 4a; never pad, never speed the voice up)
 - Line 0 = the hook: a bold claim or question, with the promise of a reveal ("…biri Türkiye'de", "sonuncusunu kimse bilmiyor").
 - 8-12 lines; one line = one cut (1.5-2.5 s). Max 3 facts. Talk like a person, not like captions. Numbers are written as they are said ("üç bin sekiz yüz").
 - Escalate; keep the best for last; the last line asks a question that invites comments ("Sen hangisini…? Yorumlara yaz.").

@@ -32,12 +32,12 @@ Brainstorm 10, score each 1–5 on: **Awe** (vastness, "bigger than us" — Berg
 Avoid: anything needing fake urgency, fabricated numbers, fear-mongering, tragedies used for views (Kokpit: no crash exploitation), and for Ayet ve Bilim nothing about evolution.
 
 ## 4. Script anatomy (Hormozi Hook→Retain→Reward, Kallaway hook formula, StoryBrand, Aprilynne/Jeltema/Nate Black retention)
-Ayet ve Bilim: target 40–60 s. **Rota 360 and Kokpit 360: 20–30 s — see 4a.** (completion rate beats length; cut every line that doesn't advance the promise).
+Ayet ve Bilim: target 40–60 s. **Rota 360: 20–30 s · Kokpit 360: 25–35 s — see 4a.** (completion rate beats length; cut every line that doesn't advance the promise).
 
 ### 4a. ROTA 360 + KOKPIT 360 SHORT FORMAT — "Az ama öz" (Rota since 2026-11-22, Kokpit added 2026-11-23 by the user; overrides the length and pacing rules in this section for both channels)
 Why: a viewer commented on Rota 360 (2026-11-22) that the videos are too slow and carry too much information; shorter + denser = higher % viewed + more loops = more recommendations. Shorter videos also mean fewer frames to render and check.
-- **Length 20–30 s, hard cap 35 s.** Script 55–80 Turkish words (8–12 lines). If the voice runs longer, cut lines; never speed the voice up past natural.
-- **ONE place (Rota) / ONE aircraft part or question (Kokpit) per video. MAX 3 facts:** hook fact → surprise fact → best fact last. Countdowns: max 3 items. Everything else goes into ideas_backlog as its own future video (one big topic = a 2–3 video series).
+- **Length — Rota 360: 20–30 s, script 55–80 Turkish words (8–12 lines). Kokpit 360: 25–35 s (the user's rule 2026-11-23, replacing the old ~60 s), script 70–95 words (10–14 lines). Hard cap 35 s for both.** If the voice runs longer, cut lines; never speed the voice up past natural.
+- **ONE place (Rota) / ONE aircraft part or question (Kokpit, taken from engine/kokpit_sources.json — the user's 5 aviation books) per video. MAX 3 facts:** hook fact → surprise fact → best fact last. Countdowns: max 3 items. Everything else goes into ideas_backlog as its own future video (one big topic = a 2–3 video series).
 - **Pacing:** a cut every 1.5–2.5 s; a new reveal every 4–6 s; no line longer than ~2.5 s spoken; no intro, no recap, no "merhaba".
 - **Hook within 1 s**, its payoff within the first 8 s.
 - **Asks compressed:** like-ask = one short phrase (≤ 1.5 s) only if it fits, else rely on the end card; end = ONE line combining comment question + follow (Rota: "Gider miydin? Yaz, seriyi takip et." / Kokpit: "Sıradaki parça? Yaz, takip et."); end card 2–2.5 s. Closers may be shortened ("Rota'yı kaydet.").
