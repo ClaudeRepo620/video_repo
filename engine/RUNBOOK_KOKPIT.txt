@@ -1,0 +1,20 @@
+**VOICE (the user's rule since 2026-11-22): MALE VOICES ONLY, on every channel. Use only Charon, Fenrir, Orus or Puck. Never Kore or any other female voice.**
+
+**NEXT TOPIC = BLACK BOX (viewer request, the user's order 2026-11-21).** If data/videos.json has no "Kokpit 360" entry about the black box (kara kutu / uçuş kayıt cihazı) yet, THAT is this run's topic: skip the brainstorm and go straight to research and script. Suggested angle (check every fact, 2 sources): "Kara kutu… ama aslında turuncu": why it is orange, the two recorders (FDR + CVR), why it sits in the tail, how it survives (crash/fire/pressure tests), the underwater locator beacon and how it is found. No crash exploitation: no real accident footage, victims or fear; keep it engineering and curiosity. Put "Bir izleyicimizin isteği üzerine" in the description. Once a black-box entry exists, ignore this paragraph and choose topics normally.
+
+**AUDIO (every video, no exceptions): follow RUNBOOK.txt section 6b — background music from the pool (never louder than the voice) and the WHOLE final audio, music included, tuned to A = 432 Hz with finish_audio.sh. Upload only the _final.mp4.**
+
+**Load engine files from GitHub as RUNBOOK.txt section 0 says (curl into ~/eng; never read a bundle into the chat).**
+
+**FIRST read PLAYBOOK.txt (growth playbook). Apply its positioning, series, script anatomy, distinctive assets and checklist to every video.**
+
+# Kokpit 360: runbook for each daily run
+
+Each run makes ONE Turkish 3D short (**20-30 s, hard cap 35 s**, 55-80 words, ONE part, max 3 facts — PLAYBOOK 4a, the user's rule since 2026-11-23; 9:16) for **Kokpit 360** (YouTube @Kokpit360-j1y · Instagram @kokp.it360): fun, curious aviation engineering ("uçağın parçaları nasıl çalışır?"), publishes it immediately, and stops. **PUBLISH IMMEDIATELY (the user's rule since 2026-11-20: "publish whenever you make it").** When QA passes, publish in the SAME run per RUNBOOK.txt section 8 — no approval, no time slot, no send_later. Never ask the user to connect the repo, send the video or approve. Only a failed QA stops publishing (then send the MP4 and say what failed). Free: Gemini TTS, code-built 3D, no AI images.
+
+Everything in RUNBOOK.txt (the travel runbook, engine/RUNBOOK.txt in the GitHub repo) applies: load, voice, QA, render, deliver. Differences:
+- Engine: `~/eng/kokpit_bundle.sh` from GitHub (run it, don't read it) (it adds `src/core/aero.js`: `turbofan(E)` cutaway engine with spinning fan/compressor/turbine, glowing combustor and airflow particles; `bladeScene(E)` cooled turbine blade; plus `flight(E)` airliner over clouds from world.js). Build new aviation sets in aero.js in the same style (dark blueprint studio, cyan/yellow HUD accents, clipped cutaways with `clippingPlanes`).
+- Topics: one part or one question per video, told with a hook and a reveal: wings & winglets, flaps/slats, landing gear, cockpit instruments, black box, autopilot, cabin pressure, why windows are round, contrails, lightning strikes, de-icing, APU, tyres, fuel in the wings, reverse thrust, the first jet... Never repeat a topic in data/videos.json (channel "Kokpit 360"). Prefer what viewers asked for in comments when the user passes them on.
+- Tone: playful and clear (male voice only: "Puck" or "Fenrir", style "[excited]"), numbered steps ("1 · EMER"), one "SORUN → ÇÖZÜM" turn, end with "SIRADAKİ PARÇA?" options as comment bait and `@kokp.it360`.
+- Look: `LOOK = { bloom 0.3, bloomThreshold 0.9, exposure 0.85 }`; studio scenes overexpose easily: keep casings mid-grey, emissive ≤ 1.4, point lights ≤ 6. QA in ONE 4×4 grid (RUNBOOK.txt section 5).
+- Panel entry `"channel": "Kokpit 360"`, format "YAYINDA" with the youtube and instagram links.

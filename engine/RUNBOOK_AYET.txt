@@ -1,0 +1,43 @@
+**VOICE (the user's rule since 2026-11-22): MALE VOICES ONLY, on every channel. Use only Charon, Fenrir, Orus or Puck. Never Kore or any other female voice.**
+
+**AUDIO (every video, no exceptions): follow RUNBOOK.txt section 6b — background music from the pool (never louder than the voice) and the WHOLE final audio, music included, tuned to A = 432 Hz with finish_audio.sh. Upload only the _final.mp4.**
+
+**Load engine files from GitHub as RUNBOOK.txt section 0 says (curl into ~/eng; never read ayet_bundle.sh into the chat).**
+
+**FIRST read PLAYBOOK.txt (growth playbook). Apply its positioning, series, script anatomy, distinctive assets and checklist to every video (Quran accuracy rules always win).**
+
+# Ayet ve Bilim: runbook for each daily run
+
+Each run makes ONE Turkish 2D short (~55-60 s, 9:16) for the **Ayet ve Bilim** channel (YouTube @AyetveBilim-c6k · Instagram @ayet.bilim), sends it to the user for approval and stops. **Never upload or post anything until the user explicitly approves in the conversation.** When they approve, publish IMMEDIATELY in that same conversation per RUNBOOK.txt section 8 (no slot, no send_later). Never ask the user to connect the repo or to send the video: call add_repo yourself, and if the local files are gone, download `videos/<slug>_final.mp4`, `videos/<slug>_thumb.jpg` and `videos/<slug>_cover.jpg` from the panel with artifacts read_file (paths). Free: Gemini TTS (AI voice), code-drawn 2D visuals, no AI images.
+
+## 0. Load
+1. In the panel artifact "Viral Video Paneli" (slug 2f566c1a-98a5-40e7-83e7-577c9d54417d) read `data/videos.json` (the engine is `~/eng/ayet_bundle.sh` from GitHub — run it, don't read it) (never repeat a verse or topic already there; the channel's earlier videos also covered: Hicr 15:22 / Kaf 50:9-11 lightning & nitrogen, Zâriyât 47 expanding universe, Hadîd 57:25 iron).
+2. `bash $SKILL/scripts/new_video.sh deep-dive <slug>` (SKILL = anthropic-skills:faceless-shorts), then `bash ~/eng/ayet_bundle.sh ~/faceless-shorts/<slug>`.
+3. Quran font: `curl -sSL -o /tmp/sch.zip https://github.com/silnrsi/font-scheherazade/releases/download/v4.300/ScheherazadeNew-4.300.zip && unzip -o -q /tmp/sch.zip -d /tmp/sch && cp /tmp/sch/ScheherazadeNew-4.300/ScheherazadeNew-Regular.ttf ~/faceless-shorts/<slug>/fonts/`
+4. Google key → `~/.faceless-shorts/google_api_key`; check `generativelanguage.googleapis.com` answers 200 (if 403 blocked: stop and tell the user).
+
+## 1. Topic (viral, but honest)
+**TOPIC LIST IS SAVED (the user's token rule since 2026-11-23): use `~/eng/ayet_topics.json` (203 topics from all miracles-of-quran.com category + latest pages, saved 2026-11-23, evolution excluded). Do NOT WebFetch the category pages.** Pick from topics without `used_by` (respect each `note`), rotating category vs the last Ayet videos, then WebFetch ONLY the chosen topic's `url` for its verse reference(s) and claim. After the video is made, set `"used_by": "<slug>"` on that topic and commit ayet_topics.json to GitHub with the video. Refresh the list from the category pages only if it is older than 30 days or nearly used up.
+Brainstorm 8 verse + science pairings; score hook, curiosity, how clearly the science is established, visual potential (2D), comment bait. Prefer well-established science (astronomy, earth science, biology, physics) and verses whose plain meaning relates. Avoid weak claims (numerology, Emoto water crystals, "scientists converted"…). Rotate fields.
+
+## 2. Script (Turkish, 120-150 words, 4 sections, each line has "sec")
+KANCA (1-2 lines: a surprising fact or question) → BİLİMSEL GERÇEK (4-5 lines, every fact checked with web search, 2 sources) → AYET VE HİKMET (reference line, the Diyanet meal read verbatim, then 1-2 lines of reflection; where scholars read the verse differently, SAY SO: "bazı yorumcular… kimileri ise…") → TAKİP ET ("…beğendiysen, yorumlarda paylaş ve Ayet ve Bilim'i takip et.").
+`"upper": true` (uppercase captions), `caps` with one `*yellow` word per chunk, `{spoken}` anchors before digit chunks. `script.verse = { ref, arabic, meal, arabic_sources, meal_source }`.
+
+## 3. Quran accuracy (non-negotiable)
+- Fetch the Arabic from two sources (web search → qurano.com word-by-word Uthmani + quran.com simple text). Never type Arabic from memory. Show ONLY the quoted phrase. Compare consonants of both sources.
+- Meal = current Diyanet İşleri Başkanlığı wording, verbatim; reference "<Sure> Suresi <n>/<ayet>".
+- Render the verse card at full size and look at every word (harakat, shadda, wasla, dagger alif). Font: Scheherazade New.
+- No prophets, sacred figures or human faces. Symbols, nature, objects only.
+- In the delivery message, list the Arabic and meal used and ask the user to verify.
+
+## 4. Build (2D, the channel's look)
+`src/core/ab2d.js`: `bg(t)` navy starfield, `mark()` "AYET & BİLİM", `chip(section)`, `glow`, `pill`, `bigNum`, `star`, `atom`, `bloodCell`, `earth(x,y,r,cut)`, `onion`, `verseCard(verse, k, highlight)`, `cta(lt)`. Add new 2D components there in the same style (flat shapes, soft glow, gold/yellow/cyan on navy). `src/shots.js` of the example = one shot per line with `add(i, note, drawFn)`; reveals on their words (`safeWd`); soft sound cues (whoosh per cut, pop, sparkle on the verse, chime on the reference, tock on CTA). Music "space".
+Voice: `python3 tools/voice_google.py .` (one request; check the printed syllable rates, ~5-6.5/s).
+
+## 5. QA, render, deliver
+Render settings: `SOFTWARE_GL=1 QS='&res=0.3&aa=0&shadow=256'` (2D: the 3D engine is idle). `check` → ONE 4×4 grid: `sheet review/all.jpg <duration/16> 4` → look at that one image + the verse card full size (RUNBOOK.txt section 5; no frame-by-frame). Then `cues`, `python3 tools/mix.py .`, `FPS=30 … video renders/<slug>.mp4` (~2 min).
+Deliver: add to the panel (publish_files patch; copy files to /mnt/user-data/outputs/panel first; videos.json entry with `"channel": "Ayet ve Bilim"`), SendUserFile the MP4 (status proactive) with: the verse (Arabic + meal + reference) to verify, the sources, a title, a caption ending with a question, 6-8 hashtags (#ayetvebilim #kuran #bilim #shorts #reels #keşfet …). and ask: "Videoyu izledin mi? Onaylıyor musun? Onaylarsan hemen YouTube ve Instagram'a yüklerim." Do not upload before approval. Also put `videos/<slug>_final.mp4`, `videos/<slug>_thumb.jpg` and `videos/<slug>_cover.jpg` in the panel so publishing works even if the workspace was reset.
+
+## SEO publish kit
+Before sending the video to the user, follow RUNBOOK.txt section 7b (keyword, title, description, tags, Instagram caption, code-made thumbnail) and show all of it in the approval message.

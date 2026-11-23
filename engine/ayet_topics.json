@@ -1,0 +1,1250 @@
+{
+ "source": "https://www.miracles-of-quran.com/index.html",
+ "saved": "2026-11-23",
+ "how_to_use": "Pick one topic without used_by, rotating category vs the last Ayet videos. WebFetch ONLY that topic's url to get the verse reference(s) and claim. After the video is made, set used_by=<slug> here and commit. Refresh this list from the category pages at most once a month (set 'saved').",
+ "excluded": [
+  "evolution"
+ ],
+ "topics": [
+  {
+   "id": "stars",
+   "title": "Stars",
+   "category": "astronomy",
+   "url": "https://www.miracles-of-quran.com/stars.html"
+  },
+  {
+   "id": "red_giant",
+   "title": "Red Giant",
+   "category": "astronomy",
+   "url": "https://www.miracles-of-quran.com/red_giant.html"
+  },
+  {
+   "id": "venus",
+   "title": "Venus",
+   "category": "astronomy",
+   "url": "https://www.miracles-of-quran.com/venus.html"
+  },
+  {
+   "id": "axial_tilt",
+   "title": "Axial Tilt",
+   "category": "astronomy",
+   "url": "https://www.miracles-of-quran.com/axial_tilt.html"
+  },
+  {
+   "id": "tidal_locking",
+   "title": "Tidal Locking",
+   "category": "astronomy",
+   "url": "https://www.miracles-of-quran.com/tidal_locking.html"
+  },
+  {
+   "id": "full_moon",
+   "title": "Full Moon",
+   "category": "astronomy",
+   "url": "https://www.miracles-of-quran.com/full_moon.html"
+  },
+  {
+   "id": "meteorites",
+   "title": "Meteorites",
+   "category": "astronomy",
+   "url": "https://www.miracles-of-quran.com/meteorites.html"
+  },
+  {
+   "id": "planets",
+   "title": "Planets",
+   "category": "astronomy",
+   "url": "https://www.miracles-of-quran.com/planets.html"
+  },
+  {
+   "id": "exoplanets",
+   "title": "Exoplanets",
+   "category": "astronomy",
+   "url": "https://www.miracles-of-quran.com/exoplanets.html"
+  },
+  {
+   "id": "planetary_orbits",
+   "title": "Planetary Orbits",
+   "category": "astronomy",
+   "url": "https://www.miracles-of-quran.com/planetary_orbits.html",
+   "used_by": "ayet-gunes-yorunge"
+  },
+  {
+   "id": "magnetosphere",
+   "title": "Magnetosphere",
+   "category": "astronomy",
+   "url": "https://www.miracles-of-quran.com/magnetosphere.html"
+  },
+  {
+   "id": "moonlight",
+   "title": "Moonlight",
+   "category": "astronomy",
+   "url": "https://www.miracles-of-quran.com/moonlight.html"
+  },
+  {
+   "id": "day",
+   "title": "Day",
+   "category": "astronomy",
+   "url": "https://www.miracles-of-quran.com/day.html"
+  },
+  {
+   "id": "solar_flare",
+   "title": "Solar Flare",
+   "category": "astronomy",
+   "url": "https://www.miracles-of-quran.com/solar_flare.html"
+  },
+  {
+   "id": "sunlight",
+   "title": "Sunlight",
+   "category": "astronomy",
+   "url": "https://www.miracles-of-quran.com/sunlight.html"
+  },
+  {
+   "id": "multi_star_system",
+   "title": "Multi-Star System",
+   "category": "astronomy",
+   "url": "https://www.miracles-of-quran.com/multi_star_system.html"
+  },
+  {
+   "id": "starlight",
+   "title": "Starlight",
+   "category": "astronomy",
+   "url": "https://www.miracles-of-quran.com/starlight.html"
+  },
+  {
+   "id": "sirius",
+   "title": "Sirius",
+   "category": "astronomy",
+   "url": "https://www.miracles-of-quran.com/sirius.html"
+  },
+  {
+   "id": "stars_wobble",
+   "title": "Stars Wobble",
+   "category": "astronomy",
+   "url": "https://www.miracles-of-quran.com/stars_wobble.html"
+  },
+  {
+   "id": "kelvin",
+   "title": "Kelvin",
+   "category": "astronomy",
+   "url": "https://www.miracles-of-quran.com/kelvin.html"
+  },
+  {
+   "id": "coal",
+   "title": "Coal",
+   "category": "geology",
+   "url": "https://www.miracles-of-quran.com/coal.html"
+  },
+  {
+   "id": "landslides",
+   "title": "Landslides",
+   "category": "geology",
+   "url": "https://www.miracles-of-quran.com/landslides.html"
+  },
+  {
+   "id": "mountains",
+   "title": "Mountains",
+   "category": "geology",
+   "url": "https://www.miracles-of-quran.com/mountains.html"
+  },
+  {
+   "id": "earth",
+   "title": "Earth",
+   "category": "geology",
+   "url": "https://www.miracles-of-quran.com/earth.html"
+  },
+  {
+   "id": "pumice",
+   "title": "Pumice",
+   "category": "geology",
+   "url": "https://www.miracles-of-quran.com/pumice.html"
+  },
+  {
+   "id": "internal_mountains",
+   "title": "Internal Mountains",
+   "category": "geology",
+   "url": "https://www.miracles-of-quran.com/internal_mountains.html"
+  },
+  {
+   "id": "earthquake",
+   "title": "Earthquake",
+   "category": "geology",
+   "url": "https://www.miracles-of-quran.com/earthquake.html"
+  },
+  {
+   "id": "aftershocks",
+   "title": "Aftershocks",
+   "category": "geology",
+   "url": "https://www.miracles-of-quran.com/aftershocks.html"
+  },
+  {
+   "id": "tectonics",
+   "title": "Tectonics",
+   "category": "geology",
+   "url": "https://www.miracles-of-quran.com/tectonics.html"
+  },
+  {
+   "id": "sinkhole",
+   "title": "Sinkhole",
+   "category": "geology",
+   "url": "https://www.miracles-of-quran.com/sinkhole.html"
+  },
+  {
+   "id": "volcano",
+   "title": "Volcano",
+   "category": "geology",
+   "url": "https://www.miracles-of-quran.com/volcano.html"
+  },
+  {
+   "id": "subduction",
+   "title": "Subduction",
+   "category": "geology",
+   "url": "https://www.miracles-of-quran.com/subduction.html"
+  },
+  {
+   "id": "fault_lines",
+   "title": "Fault Lines",
+   "category": "geology",
+   "url": "https://www.miracles-of-quran.com/fault_lines.html"
+  },
+  {
+   "id": "soil_expansion",
+   "title": "Soil Expansion",
+   "category": "geology",
+   "url": "https://www.miracles-of-quran.com/soil_expansion.html"
+  },
+  {
+   "id": "porous_rocks",
+   "title": "Porous Rocks",
+   "category": "geology",
+   "url": "https://www.miracles-of-quran.com/porous_rocks.html"
+  },
+  {
+   "id": "steam_explosions",
+   "title": "Steam Explosions",
+   "category": "geology",
+   "url": "https://www.miracles-of-quran.com/steam_explosions.html"
+  },
+  {
+   "id": "internal_waves",
+   "title": "Internal Waves",
+   "category": "geology",
+   "url": "https://www.miracles-of-quran.com/internal_waves.html"
+  },
+  {
+   "id": "photic_zone",
+   "title": "Photic Zone",
+   "category": "geology",
+   "url": "https://www.miracles-of-quran.com/photic_zone.html"
+  },
+  {
+   "id": "dead_sea",
+   "title": "Dead Sea",
+   "category": "geology",
+   "url": "https://www.miracles-of-quran.com/dead_sea.html"
+  },
+  {
+   "id": "hydrothermal_vents",
+   "title": "Hydrothermal Vents",
+   "category": "geology",
+   "url": "https://www.miracles-of-quran.com/hydrothermal_vents.html"
+  },
+  {
+   "id": "asthenosphere",
+   "title": "Asthenosphere",
+   "category": "geology",
+   "url": "https://www.miracles-of-quran.com/asthenosphere.html"
+  },
+  {
+   "id": "weathering_erosion",
+   "title": "Weathering & Erosion",
+   "category": "geology",
+   "url": "https://www.miracles-of-quran.com/weathering_erosion.html"
+  },
+  {
+   "id": "water_cycle",
+   "title": "Water Cycle",
+   "category": "meteorology",
+   "url": "https://www.miracles-of-quran.com/water_cycle.html"
+  },
+  {
+   "id": "atmosphere",
+   "title": "Atmosphere",
+   "category": "meteorology",
+   "url": "https://www.miracles-of-quran.com/atmosphere.html"
+  },
+  {
+   "id": "water",
+   "title": "Water",
+   "category": "meteorology",
+   "url": "https://www.miracles-of-quran.com/water.html"
+  },
+  {
+   "id": "desertification",
+   "title": "Desertification",
+   "category": "meteorology",
+   "url": "https://www.miracles-of-quran.com/desertification.html"
+  },
+  {
+   "id": "sea_breeze",
+   "title": "Sea Breeze",
+   "category": "meteorology",
+   "url": "https://www.miracles-of-quran.com/sea_breeze.html"
+  },
+  {
+   "id": "orographic_effect",
+   "title": "Orographic Effect",
+   "category": "meteorology",
+   "url": "https://www.miracles-of-quran.com/orographic_effect.html"
+  },
+  {
+   "id": "freshwater",
+   "title": "Freshwater",
+   "category": "meteorology",
+   "url": "https://www.miracles-of-quran.com/freshwater.html"
+  },
+  {
+   "id": "frost_weathering",
+   "title": "Frost Weathering",
+   "category": "meteorology",
+   "url": "https://www.miracles-of-quran.com/frost_weathering.html"
+  },
+  {
+   "id": "wind",
+   "title": "Wind",
+   "category": "meteorology",
+   "url": "https://www.miracles-of-quran.com/wind.html"
+  },
+  {
+   "id": "acid_rain",
+   "title": "Acid Rain",
+   "category": "meteorology",
+   "url": "https://www.miracles-of-quran.com/acid_rain.html"
+  },
+  {
+   "id": "microburst",
+   "title": "Microburst",
+   "category": "meteorology",
+   "url": "https://www.miracles-of-quran.com/microburst.html"
+  },
+  {
+   "id": "cloud_seeding",
+   "title": "Cloud Seeding",
+   "category": "meteorology",
+   "url": "https://www.miracles-of-quran.com/cloud_seeding.html"
+  },
+  {
+   "id": "dew",
+   "title": "Dew",
+   "category": "meteorology",
+   "url": "https://www.miracles-of-quran.com/dew.html"
+  },
+  {
+   "id": "shorelines",
+   "title": "Shorelines",
+   "category": "meteorology",
+   "url": "https://www.miracles-of-quran.com/shorelines.html"
+  },
+  {
+   "id": "fire_whirl",
+   "title": "Fire Whirl",
+   "category": "meteorology",
+   "url": "https://www.miracles-of-quran.com/fire_whirl.html"
+  },
+  {
+   "id": "atmospheric_pressure",
+   "title": "Atmospheric Pressure",
+   "category": "meteorology",
+   "url": "https://www.miracles-of-quran.com/atmospheric_pressure.html"
+  },
+  {
+   "id": "flash_flood",
+   "title": "Flash Flood",
+   "category": "meteorology",
+   "url": "https://www.miracles-of-quran.com/flash_flood.html"
+  },
+  {
+   "id": "clouds_weight",
+   "title": "Weight Of Clouds",
+   "category": "meteorology",
+   "url": "https://www.miracles-of-quran.com/clouds_weight.html",
+   "used_by": "ayet-bulut"
+  },
+  {
+   "id": "seven_heavens",
+   "title": "Seven Heavens",
+   "category": "cosmology",
+   "url": "https://www.miracles-of-quran.com/seven_heavens.html",
+   "note": "interpretation varies - narration must say so"
+  },
+  {
+   "id": "big_bang",
+   "title": "Big Bang",
+   "category": "cosmology",
+   "url": "https://www.miracles-of-quran.com/big_bang.html"
+  },
+  {
+   "id": "expanding_universe",
+   "title": "Expanding Universe",
+   "category": "cosmology",
+   "url": "https://www.miracles-of-quran.com/expanding_universe.html"
+  },
+  {
+   "id": "big_crunch",
+   "title": "Big Crunch",
+   "category": "cosmology",
+   "url": "https://www.miracles-of-quran.com/big_crunch.html"
+  },
+  {
+   "id": "age_of_universe",
+   "title": "Age Of Universe",
+   "category": "cosmology",
+   "url": "https://www.miracles-of-quran.com/age_of_universe.html"
+  },
+  {
+   "id": "sound_waves",
+   "title": "Sound Waves",
+   "category": "cosmology",
+   "url": "https://www.miracles-of-quran.com/sound_waves.html"
+  },
+  {
+   "id": "isotropy",
+   "title": "Isotropy",
+   "category": "cosmology",
+   "url": "https://www.miracles-of-quran.com/isotropy.html"
+  },
+  {
+   "id": "primordial_smoke",
+   "title": "Primordial Smoke",
+   "category": "cosmology",
+   "url": "https://www.miracles-of-quran.com/primordial_smoke.html"
+  },
+  {
+   "id": "galaxy_filaments",
+   "title": "Galaxy Filaments",
+   "category": "cosmology",
+   "url": "https://www.miracles-of-quran.com/galaxy_filaments.html"
+  },
+  {
+   "id": "dark_energy",
+   "title": "Dark Energy",
+   "category": "cosmology",
+   "url": "https://www.miracles-of-quran.com/dark_energy.html"
+  },
+  {
+   "id": "time_dilation",
+   "title": "Time Dilation",
+   "category": "cosmology",
+   "url": "https://www.miracles-of-quran.com/time_dilation.html"
+  },
+  {
+   "id": "spacetime",
+   "title": "Spacetime",
+   "category": "cosmology",
+   "url": "https://www.miracles-of-quran.com/spacetime.html"
+  },
+  {
+   "id": "gravitational_waves",
+   "title": "Gravitational Waves",
+   "category": "cosmology",
+   "url": "https://www.miracles-of-quran.com/gravitational_waves.html"
+  },
+  {
+   "id": "equivalence_principle",
+   "title": "Equivalence Principle",
+   "category": "cosmology",
+   "url": "https://www.miracles-of-quran.com/equivalence_principle.html"
+  },
+  {
+   "id": "gravity",
+   "title": "Gravity",
+   "category": "cosmology",
+   "url": "https://www.miracles-of-quran.com/gravity.html"
+  },
+  {
+   "id": "redshifting",
+   "title": "Redshifting",
+   "category": "cosmology",
+   "url": "https://www.miracles-of-quran.com/redshifting.html"
+  },
+  {
+   "id": "shape_of_universe",
+   "title": "Shape Of Universe",
+   "category": "cosmology",
+   "url": "https://www.miracles-of-quran.com/shape_of_universe.html"
+  },
+  {
+   "id": "meiosis",
+   "title": "Meiosis",
+   "category": "embryology",
+   "url": "https://www.miracles-of-quran.com/meiosis.html"
+  },
+  {
+   "id": "male_fertility",
+   "title": "Male Fertility",
+   "category": "embryology",
+   "url": "https://www.miracles-of-quran.com/male_fertility.html"
+  },
+  {
+   "id": "fetal_development",
+   "title": "Fetal Development",
+   "category": "embryology",
+   "url": "https://www.miracles-of-quran.com/fetal_development.html"
+  },
+  {
+   "id": "human_embryo",
+   "title": "Human Embryo",
+   "category": "embryology",
+   "url": "https://www.miracles-of-quran.com/human_embryo.html"
+  },
+  {
+   "id": "miscarriage",
+   "title": "Miscarriage",
+   "category": "embryology",
+   "url": "https://www.miracles-of-quran.com/miscarriage.html"
+  },
+  {
+   "id": "gender",
+   "title": "Gender",
+   "category": "embryology",
+   "url": "https://www.miracles-of-quran.com/gender.html"
+  },
+  {
+   "id": "bones",
+   "title": "Bones",
+   "category": "embryology",
+   "url": "https://www.miracles-of-quran.com/bones.html"
+  },
+  {
+   "id": "human_senses",
+   "title": "Human Senses",
+   "category": "embryology",
+   "url": "https://www.miracles-of-quran.com/human_senses.html"
+  },
+  {
+   "id": "womb",
+   "title": "Womb",
+   "category": "embryology",
+   "url": "https://www.miracles-of-quran.com/womb.html"
+  },
+  {
+   "id": "amniotic_fluid",
+   "title": "Amniotic Fluid",
+   "category": "embryology",
+   "url": "https://www.miracles-of-quran.com/amniotic_fluid.html"
+  },
+  {
+   "id": "sperm",
+   "title": "Sperm",
+   "category": "embryology",
+   "url": "https://www.miracles-of-quran.com/sperm.html"
+  },
+  {
+   "id": "neurons",
+   "title": "Neurons",
+   "category": "physiology",
+   "url": "https://www.miracles-of-quran.com/neurons.html"
+  },
+  {
+   "id": "amd",
+   "title": "AMD",
+   "category": "physiology",
+   "url": "https://www.miracles-of-quran.com/amd.html"
+  },
+  {
+   "id": "brain_cells",
+   "title": "Brain Cells",
+   "category": "physiology",
+   "url": "https://www.miracles-of-quran.com/brain_cells.html"
+  },
+  {
+   "id": "reading",
+   "title": "Reading",
+   "category": "physiology",
+   "url": "https://www.miracles-of-quran.com/reading.html"
+  },
+  {
+   "id": "flash_blindness",
+   "title": "Flash Blindness",
+   "category": "physiology",
+   "url": "https://www.miracles-of-quran.com/flash_blindness.html"
+  },
+  {
+   "id": "brainstem",
+   "title": "Brainstem",
+   "category": "physiology",
+   "url": "https://www.miracles-of-quran.com/brainstem.html"
+  },
+  {
+   "id": "cholesterol",
+   "title": "Cholesterol",
+   "category": "physiology",
+   "url": "https://www.miracles-of-quran.com/cholesterol.html"
+  },
+  {
+   "id": "bedsores",
+   "title": "Bedsores",
+   "category": "physiology",
+   "url": "https://www.miracles-of-quran.com/bedsores.html"
+  },
+  {
+   "id": "inner_ear",
+   "title": "Inner Ear",
+   "category": "physiology",
+   "url": "https://www.miracles-of-quran.com/inner_ear.html"
+  },
+  {
+   "id": "cataracts",
+   "title": "Cataracts",
+   "category": "physiology",
+   "url": "https://www.miracles-of-quran.com/cataracts.html"
+  },
+  {
+   "id": "vision",
+   "title": "Vision",
+   "category": "physiology",
+   "url": "https://www.miracles-of-quran.com/vision.html"
+  },
+  {
+   "id": "milk",
+   "title": "Milk",
+   "category": "physiology",
+   "url": "https://www.miracles-of-quran.com/milk.html"
+  },
+  {
+   "id": "brain_functions",
+   "title": "Brain Functions",
+   "category": "physiology",
+   "url": "https://www.miracles-of-quran.com/brain_functions.html"
+  },
+  {
+   "id": "pupil",
+   "title": "Pupil",
+   "category": "physiology",
+   "url": "https://www.miracles-of-quran.com/pupil.html"
+  },
+  {
+   "id": "fingerprints",
+   "title": "Fingerprints",
+   "category": "physiology",
+   "url": "https://www.miracles-of-quran.com/fingerprints.html",
+   "used_by": "ayet-parmak-izi"
+  },
+  {
+   "id": "eardrum",
+   "title": "Eardrum",
+   "category": "physiology",
+   "url": "https://www.miracles-of-quran.com/eardrum.html"
+  },
+  {
+   "id": "skin_nerves",
+   "title": "Skin Nerves",
+   "category": "physiology",
+   "url": "https://www.miracles-of-quran.com/skin_nerves.html"
+  },
+  {
+   "id": "vagus_nerve",
+   "title": "Vagus Nerve",
+   "category": "physiology",
+   "url": "https://www.miracles-of-quran.com/vagus_nerve.html",
+   "latest": true
+  },
+  {
+   "id": "speed_of_light",
+   "title": "Speed Of Light",
+   "category": "physics",
+   "url": "https://www.miracles-of-quran.com/speed_of_light.html"
+  },
+  {
+   "id": "solar_energy",
+   "title": "Solar Energy",
+   "category": "physics",
+   "url": "https://www.miracles-of-quran.com/solar_energy.html"
+  },
+  {
+   "id": "work",
+   "title": "Work",
+   "category": "physics",
+   "url": "https://www.miracles-of-quran.com/work.html"
+  },
+  {
+   "id": "light",
+   "title": "Light",
+   "category": "physics",
+   "url": "https://www.miracles-of-quran.com/light.html"
+  },
+  {
+   "id": "atoms",
+   "title": "Atoms",
+   "category": "physics",
+   "url": "https://www.miracles-of-quran.com/atoms.html"
+  },
+  {
+   "id": "pairs",
+   "title": "Pairs",
+   "category": "physics",
+   "url": "https://www.miracles-of-quran.com/pairs.html"
+  },
+  {
+   "id": "cold_plasma",
+   "title": "Cold Plasma",
+   "category": "physics",
+   "url": "https://www.miracles-of-quran.com/cold_plasma.html"
+  },
+  {
+   "id": "rayleigh_scattering",
+   "title": "Rayleigh Scattering",
+   "category": "physics",
+   "url": "https://www.miracles-of-quran.com/rayleigh_scattering.html"
+  },
+  {
+   "id": "terminal_velocity",
+   "title": "Terminal Velocity",
+   "category": "physics",
+   "url": "https://www.miracles-of-quran.com/terminal_velocity.html"
+  },
+  {
+   "id": "pulsars",
+   "title": "Pulsars",
+   "category": "physics",
+   "url": "https://www.miracles-of-quran.com/pulsars.html"
+  },
+  {
+   "id": "armor_piercing",
+   "title": "Armor-Piercing",
+   "category": "physics",
+   "url": "https://www.miracles-of-quran.com/armor_piercing.html"
+  },
+  {
+   "id": "sonic_weapons",
+   "title": "Sonic Weapons",
+   "category": "physics",
+   "url": "https://www.miracles-of-quran.com/sonic_weapons.html"
+  },
+  {
+   "id": "mass",
+   "title": "Mass",
+   "category": "physics",
+   "url": "https://www.miracles-of-quran.com/mass.html"
+  },
+  {
+   "id": "singularity",
+   "title": "Singularity",
+   "category": "physics",
+   "url": "https://www.miracles-of-quran.com/singularity.html",
+   "note": "weak claim - avoid unless strong"
+  },
+  {
+   "id": "wormholes",
+   "title": "Wormholes",
+   "category": "physics",
+   "url": "https://www.miracles-of-quran.com/wormholes.html",
+   "note": "hypothetical - say so"
+  },
+  {
+   "id": "string_theory",
+   "title": "String Theory",
+   "category": "physics",
+   "url": "https://www.miracles-of-quran.com/string_theory.html",
+   "note": "unproven theory - say so"
+  },
+  {
+   "id": "raptors",
+   "title": "Raptors",
+   "category": "zoology",
+   "url": "https://www.miracles-of-quran.com/raptors.html"
+  },
+  {
+   "id": "spider_web",
+   "title": "Spider Web",
+   "category": "zoology",
+   "url": "https://www.miracles-of-quran.com/spider_web.html"
+  },
+  {
+   "id": "ants",
+   "title": "Ants",
+   "category": "zoology",
+   "url": "https://www.miracles-of-quran.com/ants.html"
+  },
+  {
+   "id": "honey_bees",
+   "title": "Honey Bees",
+   "category": "zoology",
+   "url": "https://www.miracles-of-quran.com/honey_bees.html"
+  },
+  {
+   "id": "colonies",
+   "title": "Colonies",
+   "category": "zoology",
+   "url": "https://www.miracles-of-quran.com/colonies.html"
+  },
+  {
+   "id": "animal_languages",
+   "title": "Animal Languages",
+   "category": "zoology",
+   "url": "https://www.miracles-of-quran.com/animal_languages.html"
+  },
+  {
+   "id": "mosquito",
+   "title": "Mosquito",
+   "category": "zoology",
+   "url": "https://www.miracles-of-quran.com/mosquito.html"
+  },
+  {
+   "id": "crow",
+   "title": "Crow",
+   "category": "zoology",
+   "url": "https://www.miracles-of-quran.com/crow.html"
+  },
+  {
+   "id": "nocturnal_animals",
+   "title": "Nocturnal Animals",
+   "category": "zoology",
+   "url": "https://www.miracles-of-quran.com/nocturnal_animals.html"
+  },
+  {
+   "id": "housefly",
+   "title": "Housefly",
+   "category": "zoology",
+   "url": "https://www.miracles-of-quran.com/housefly.html"
+  },
+  {
+   "id": "fossils",
+   "title": "Fossils",
+   "category": "zoology",
+   "url": "https://www.miracles-of-quran.com/fossils.html",
+   "note": "may lean on evolution - read the page; skip if it does"
+  },
+  {
+   "id": "camels",
+   "title": "Camels",
+   "category": "zoology",
+   "url": "https://www.miracles-of-quran.com/camels.html"
+  },
+  {
+   "id": "exoskeleton",
+   "title": "Exoskeleton",
+   "category": "zoology",
+   "url": "https://www.miracles-of-quran.com/exoskeleton.html"
+  },
+  {
+   "id": "magnetoreception",
+   "title": "Magnetoreception",
+   "category": "zoology",
+   "url": "https://www.miracles-of-quran.com/magnetoreception.html"
+  },
+  {
+   "id": "soaring",
+   "title": "Soaring",
+   "category": "zoology",
+   "url": "https://www.miracles-of-quran.com/soaring.html",
+   "latest": true
+  },
+  {
+   "id": "flight",
+   "title": "Flight",
+   "category": "history",
+   "url": "https://www.miracles-of-quran.com/flight.html"
+  },
+  {
+   "id": "paper_money",
+   "title": "Paper Money",
+   "category": "history",
+   "url": "https://www.miracles-of-quran.com/paper_money.html"
+  },
+  {
+   "id": "noah",
+   "title": "Noah",
+   "category": "history",
+   "url": "https://www.miracles-of-quran.com/noah.html",
+   "note": "prophet topic: no figures/faces"
+  },
+  {
+   "id": "north",
+   "title": "North",
+   "category": "history",
+   "url": "https://www.miracles-of-quran.com/north.html"
+  },
+  {
+   "id": "petra",
+   "title": "Petra",
+   "category": "history",
+   "url": "https://www.miracles-of-quran.com/petra.html"
+  },
+  {
+   "id": "calendar",
+   "title": "Calendar",
+   "category": "history",
+   "url": "https://www.miracles-of-quran.com/calendar.html"
+  },
+  {
+   "id": "ubar",
+   "title": "Ubar",
+   "category": "history",
+   "url": "https://www.miracles-of-quran.com/ubar.html"
+  },
+  {
+   "id": "skydiving",
+   "title": "Skydiving",
+   "category": "history",
+   "url": "https://www.miracles-of-quran.com/skydiving.html"
+  },
+  {
+   "id": "dried_river",
+   "title": "Dried River",
+   "category": "history",
+   "url": "https://www.miracles-of-quran.com/dried_river.html"
+  },
+  {
+   "id": "mourning_pharaoh",
+   "title": "Mourning of Pharaoh",
+   "category": "history",
+   "url": "https://www.miracles-of-quran.com/mourning_pharaoh.html"
+  },
+  {
+   "id": "pharaoh_mummy",
+   "title": "Pharaoh's Mummy",
+   "category": "history",
+   "url": "https://www.miracles-of-quran.com/pharaoh_mummy.html"
+  },
+  {
+   "id": "haman",
+   "title": "Haman",
+   "category": "history",
+   "url": "https://www.miracles-of-quran.com/haman.html",
+   "note": "historical figure: no faces"
+  },
+  {
+   "id": "moses",
+   "title": "Moses",
+   "category": "history",
+   "url": "https://www.miracles-of-quran.com/moses.html",
+   "note": "prophet topic: no figures/faces"
+  },
+  {
+   "id": "karnak",
+   "title": "Karnak Temple",
+   "category": "history",
+   "url": "https://www.miracles-of-quran.com/karnak.html"
+  },
+  {
+   "id": "crucifixion",
+   "title": "Crucifixion",
+   "category": "history",
+   "url": "https://www.miracles-of-quran.com/crucifixion.html",
+   "note": "sensitive; no figures"
+  },
+  {
+   "id": "pharaoh",
+   "title": "Pharaoh",
+   "category": "history",
+   "url": "https://www.miracles-of-quran.com/pharaoh.html"
+  },
+  {
+   "id": "door_locks",
+   "title": "Door Locks",
+   "category": "history",
+   "url": "https://www.miracles-of-quran.com/door_locks.html"
+  },
+  {
+   "id": "deities",
+   "title": "Deities",
+   "category": "history",
+   "url": "https://www.miracles-of-quran.com/deities.html"
+  },
+  {
+   "id": "prostrations",
+   "title": "Prostrations",
+   "category": "history",
+   "url": "https://www.miracles-of-quran.com/prostrations.html"
+  },
+  {
+   "id": "bioluminescence",
+   "title": "Bioluminescence",
+   "category": "biology",
+   "url": "https://www.miracles-of-quran.com/bioluminescence.html"
+  },
+  {
+   "id": "colors",
+   "title": "Colors",
+   "category": "biology",
+   "url": "https://www.miracles-of-quran.com/colors.html"
+  },
+  {
+   "id": "honey",
+   "title": "Honey",
+   "category": "biology",
+   "url": "https://www.miracles-of-quran.com/honey.html"
+  },
+  {
+   "id": "fats",
+   "title": "Fats",
+   "category": "biology",
+   "url": "https://www.miracles-of-quran.com/fats.html"
+  },
+  {
+   "id": "hypoxia",
+   "title": "Hypoxia",
+   "category": "biology",
+   "url": "https://www.miracles-of-quran.com/hypoxia.html"
+  },
+  {
+   "id": "white_hair",
+   "title": "White Hair",
+   "category": "biology",
+   "url": "https://www.miracles-of-quran.com/white_hair.html"
+  },
+  {
+   "id": "alzheimer",
+   "title": "Alzheimer's",
+   "category": "biology",
+   "url": "https://www.miracles-of-quran.com/alzheimer.html"
+  },
+  {
+   "id": "fear",
+   "title": "Fear",
+   "category": "biology",
+   "url": "https://www.miracles-of-quran.com/fear.html"
+  },
+  {
+   "id": "keraunoparalysis",
+   "title": "Keraunoparalysis",
+   "category": "biology",
+   "url": "https://www.miracles-of-quran.com/keraunoparalysis.html"
+  },
+  {
+   "id": "bacteria",
+   "title": "Bacteria",
+   "category": "biology",
+   "url": "https://www.miracles-of-quran.com/bacteria.html"
+  },
+  {
+   "id": "fasting",
+   "title": "Fasting",
+   "category": "biology",
+   "url": "https://www.miracles-of-quran.com/fasting.html"
+  },
+  {
+   "id": "breastfeeding",
+   "title": "Breastfeeding",
+   "category": "biology",
+   "url": "https://www.miracles-of-quran.com/breastfeeding.html"
+  },
+  {
+   "id": "nutrient_cycle",
+   "title": "Nutrient Cycle",
+   "category": "biology",
+   "url": "https://www.miracles-of-quran.com/nutrient_cycle.html"
+  },
+  {
+   "id": "pollination",
+   "title": "Pollination",
+   "category": "biology",
+   "url": "https://www.miracles-of-quran.com/pollination.html"
+  },
+  {
+   "id": "antioxidants",
+   "title": "Antioxidants",
+   "category": "biology",
+   "url": "https://www.miracles-of-quran.com/antioxidants.html"
+  },
+  {
+   "id": "plant_stress",
+   "title": "Plant Stress",
+   "category": "biology",
+   "url": "https://www.miracles-of-quran.com/plant_stress.html"
+  },
+  {
+   "id": "frost",
+   "title": "Frost",
+   "category": "biology",
+   "url": "https://www.miracles-of-quran.com/frost.html"
+  },
+  {
+   "id": "gardens",
+   "title": "Gardens",
+   "category": "biology",
+   "url": "https://www.miracles-of-quran.com/gardens.html"
+  },
+  {
+   "id": "fig",
+   "title": "Fig",
+   "category": "biology",
+   "url": "https://www.miracles-of-quran.com/fig.html"
+  },
+  {
+   "id": "hydrogen_peroxide",
+   "title": "Hydrogen Peroxide",
+   "category": "chemistry",
+   "url": "https://www.miracles-of-quran.com/hydrogen_peroxide.html"
+  },
+  {
+   "id": "viscosity",
+   "title": "Viscosity",
+   "category": "chemistry",
+   "url": "https://www.miracles-of-quran.com/viscosity.html"
+  },
+  {
+   "id": "superionic_water",
+   "title": "Superionic Water",
+   "category": "chemistry",
+   "url": "https://www.miracles-of-quran.com/superionic_water.html"
+  },
+  {
+   "id": "pyramids",
+   "title": "Pyramids",
+   "category": "chemistry",
+   "url": "https://www.miracles-of-quran.com/pyramids.html"
+  },
+  {
+   "id": "minerals",
+   "title": "Minerals",
+   "category": "chemistry",
+   "url": "https://www.miracles-of-quran.com/minerals.html"
+  },
+  {
+   "id": "hydrogen",
+   "title": "Hydrogen",
+   "category": "chemistry",
+   "url": "https://www.miracles-of-quran.com/hydrogen.html"
+  },
+  {
+   "id": "halocline",
+   "title": "Halocline",
+   "category": "chemistry",
+   "url": "https://www.miracles-of-quran.com/halocline.html"
+  },
+  {
+   "id": "iron",
+   "title": "Iron",
+   "category": "chemistry",
+   "url": "https://www.miracles-of-quran.com/iron.html",
+   "used_by": "ayet-demir"
+  },
+  {
+   "id": "rust",
+   "title": "Rust",
+   "category": "chemistry",
+   "url": "https://www.miracles-of-quran.com/rust.html"
+  },
+  {
+   "id": "celsius",
+   "title": "Celsius",
+   "category": "chemistry",
+   "url": "https://www.miracles-of-quran.com/celsius.html"
+  },
+  {
+   "id": "pyritized_fossils",
+   "title": "Pyritized Fossils",
+   "category": "chemistry",
+   "url": "https://www.miracles-of-quran.com/pyritized_fossils.html",
+   "note": "may lean on evolution - read the page; skip if it does"
+  },
+  {
+   "id": "fluorescence",
+   "title": "Fluorescence",
+   "category": "chemistry",
+   "url": "https://www.miracles-of-quran.com/fluorescence.html"
+  },
+  {
+   "id": "chlorophyll",
+   "title": "Chlorophyll",
+   "category": "chemistry",
+   "url": "https://www.miracles-of-quran.com/chlorophyll.html"
+  },
+  {
+   "id": "pompeii",
+   "title": "Pompeii",
+   "category": "chemistry",
+   "url": "https://www.miracles-of-quran.com/pompeii.html"
+  },
+  {
+   "id": "nitrogen_cycle",
+   "title": "Nitrogen Cycle",
+   "category": "chemistry",
+   "url": "https://www.miracles-of-quran.com/nitrogen_cycle.html",
+   "latest": true
+  },
+  {
+   "id": "meters",
+   "title": "Meters",
+   "category": "mathematics",
+   "url": "https://www.miracles-of-quran.com/meters.html"
+  },
+  {
+   "id": "kilometers",
+   "title": "Kilometers",
+   "category": "mathematics",
+   "url": "https://www.miracles-of-quran.com/kilometers.html"
+  },
+  {
+   "id": "miles",
+   "title": "Miles",
+   "category": "mathematics",
+   "url": "https://www.miracles-of-quran.com/miles.html"
+  },
+  {
+   "id": "light_years",
+   "title": "Light-Years",
+   "category": "mathematics",
+   "url": "https://www.miracles-of-quran.com/light_years.html"
+  },
+  {
+   "id": "hypersonic",
+   "title": "Hypersonic",
+   "category": "mathematics",
+   "url": "https://www.miracles-of-quran.com/hypersonic.html",
+   "latest": true
+  },
+  {
+   "id": "prime_numbers",
+   "title": "Prime Numbers",
+   "category": "mathematics",
+   "url": "https://www.miracles-of-quran.com/prime_numbers.html"
+  },
+  {
+   "id": "pulsar_navigation",
+   "title": "Pulsar Navigation",
+   "category": "mathematics",
+   "url": "https://www.miracles-of-quran.com/pulsar_navigation.html"
+  },
+  {
+   "id": "base-19",
+   "title": "Base-19",
+   "category": "mathematics",
+   "url": "https://www.miracles-of-quran.com/base-19.html",
+   "note": "numerology - only if clearly sourced"
+  },
+  {
+   "id": "digital_books",
+   "title": "Digital Books",
+   "category": "mathematics",
+   "url": "https://www.miracles-of-quran.com/digital_books.html"
+  },
+  {
+   "id": "pi",
+   "title": "Pi",
+   "category": "mathematics",
+   "url": "https://www.miracles-of-quran.com/pi.html",
+   "note": "numerology - only if clearly sourced"
+  },
+  {
+   "id": "encoding",
+   "title": "Encoding",
+   "category": "mathematics",
+   "url": "https://www.miracles-of-quran.com/encoding.html"
+  },
+  {
+   "id": "abjad_numerals",
+   "title": "Abjad Numerals",
+   "category": "mathematics",
+   "url": "https://www.miracles-of-quran.com/abjad_numerals.html",
+   "note": "numerology - only if clearly sourced"
+  },
+  {
+   "id": "euler",
+   "title": "Euler",
+   "category": "mathematics",
+   "url": "https://www.miracles-of-quran.com/euler.html",
+   "note": "numerology - only if clearly sourced"
+  }
+ ]
+}

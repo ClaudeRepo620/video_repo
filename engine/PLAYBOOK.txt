@@ -1,0 +1,102 @@
+# GROWTH PLAYBOOK — Rota 360 · Kokpit 360 · Ayet ve Bilim
+Every daily run reads this BEFORE choosing a topic and writing the script, and checks the finished video against the checklist at the end.
+Built from the user's sources: Positioning (Ries & Trout), This Is Marketing + All Marketers Are Liars (Godin), Building a StoryBrand (Miller), Contagious (Berger), Crossing the Chasm (Moore), Hacking Growth (Ellis & Brown), How Brands Grow (Sharp), Influence (Cialdini), The Unified Laws of Marketing deck, and the creators Kallaway, Aprilynne Alter, Alex Hormozi, Dave Jeltema, Think Media, Nate Black, Nathan (bluprint), heyDominik, Millie Adrian, Jade Beason, Henbu, Steven Wommack, Allison Baek, mikirai, Alex Cattoni, Ethan Shaw, Pat Flynn, OnPointFresh, Adam Erhart.
+Use the IDEAS only; never copy any book's or creator's wording, script or shots.
+
+## 0. The one-line strategy (Unified Laws: gap → story → distinctive assets → availability)
+1. **Own one gap in the mind** (Positioning, Moore's beachhead, Godin's smallest viable audience).
+2. **Tell a story the viewer already wants to believe**, with the viewer as hero (StoryBrand, Godin).
+3. **Be instantly recognisable** — same look, sound, words every time (Sharp: distinctiveness beats differentiation).
+4. **Be everywhere the light viewer scrolls** — every video on YouTube Shorts + Instagram Reels, daily, at the researched times (Sharp: growth = reach to light viewers, not just pleasing fans).
+
+## 1. Positioning — the word each channel owns
+| Channel | The gap we own (say it the same way everywhere) | Beachhead audience | Identity line ("people like us…") |
+|---|---|---|---|
+| **Rota 360** | "Dünyanın en şaşırtıcı yerlerini **3D** gezdiren Türkçe kanal" | 18–35, dreams of travelling, saves places for "one day" | "Rota ekibi gitmeden önce bilir." |
+| **Kokpit 360** | "Uçağın **içini açıp** gösteren kanal — uçak neden böyle?" | Curious flyers, aviation fans, students | "Kokpit ekibi uçağa binince farkı görür." |
+| **Ayet ve Bilim** | "Ayet + bilim, **kaynaklı ve dürüst**" | Believers who love science and want trustworthy, shareable content | "Biz okuruz, araştırırız, paylaşırız." |
+Rules: every title, bio line, description first line and CTA reinforces the gap. Don't drift into other niches (Moore: win the beachhead before expanding). Each channel stays inside its gap for at least 90 days.
+
+## 2. Distinctive assets — never change these randomly (Sharp)
+For each channel keep FIXED: colour palette, the logo mark in the same corner, caption font/style (white + one yellow word), the thumbnail template, the end card, a **0.6 s sonic logo** (same synthesized chime/whoosh at 0:00 and at the end — build once in mix.py per channel and reuse), and one **signature opener and closer** line:
+- Rota 360 opener style: a place + an impossible-sounding fact. Closer: "Rota'yı kaydet, gitmeden önce lazım olacak."
+- Kokpit 360 opener style: "Uçağa binen herkes bunu görür ama…" Closer: "Sıradaki parça hangisi? Yorumlara yaz."
+- Ayet ve Bilim opener style: a scientific fact framed as a question. Closer: "Kaynaklar açıklamada. Bunu bilmesi gereken birine gönder."
+Series names (recognisable formats, Contagious "Public"): always put the series tag on the first frame and in the title.
+- Rota 360: **"Haritada Yok"** (hidden places), **"Gitmeden Bil"** (practical tips), **"Dünyanın En…"** (countdowns), **"Türkiye'nin Gizli Cenneti"**.
+- Kokpit 360: **"Uçakta Neden?"**, **"Pilotların Bildiği"**, **"Parça Parça Uçak"** (one part per episode, numbered).
+- Ayet ve Bilim: **"Ayet ve Bilim #N"** numbered, plus the miracles-of-quran.com category as subtitle (Astronomi, Jeoloji, Fizyoloji…).
+
+## 3. Topic choice — score every idea (Hacking Growth ICE + Contagious STEPPS)
+Brainstorm 10, score each 1–5 on: **Awe** (vastness, "bigger than us" — Berger: awe-inspiring science content was ~30 % more likely to be shared), **Curiosity gap** (a question people can't leave unanswered), **Social currency** (sharing it makes the sharer look smart/insider), **Practical value** (useful for a trip, a flight, daily life — people share to help), **Trigger** (tied to something they see often: flights, holidays, bayram, summer, news, season), **Broad reach** (understandable by a light viewer with zero background — Sharp), **3D/visual potential**, **Ease** (can we build it well today). Pick the top score; keep the runner-ups in data/videos.json `ideas_backlog` for later.
+Avoid: anything needing fake urgency, fabricated numbers, fear-mongering, tragedies used for views (Kokpit: no crash exploitation), and for Ayet ve Bilim nothing about evolution.
+
+## 4. Script anatomy (Hormozi Hook→Retain→Reward, Kallaway hook formula, StoryBrand, Aprilynne/Jeltema/Nate Black retention)
+Ayet ve Bilim: target 40–60 s. **Rota 360 and Kokpit 360: 20–30 s — see 4a.** (completion rate beats length; cut every line that doesn't advance the promise).
+
+### 4a. ROTA 360 + KOKPIT 360 SHORT FORMAT — "Az ama öz" (Rota since 2026-11-22, Kokpit added 2026-11-23 by the user; overrides the length and pacing rules in this section for both channels)
+Why: a viewer commented on Rota 360 (2026-11-22) that the videos are too slow and carry too much information; shorter + denser = higher % viewed + more loops = more recommendations. Shorter videos also mean fewer frames to render and check.
+- **Length 20–30 s, hard cap 35 s.** Script 55–80 Turkish words (8–12 lines). If the voice runs longer, cut lines; never speed the voice up past natural.
+- **ONE place (Rota) / ONE aircraft part or question (Kokpit) per video. MAX 3 facts:** hook fact → surprise fact → best fact last. Countdowns: max 3 items. Everything else goes into ideas_backlog as its own future video (one big topic = a 2–3 video series).
+- **Pacing:** a cut every 1.5–2.5 s; a new reveal every 4–6 s; no line longer than ~2.5 s spoken; no intro, no recap, no "merhaba".
+- **Hook within 1 s**, its payoff within the first 8 s.
+- **Asks compressed:** like-ask = one short phrase (≤ 1.5 s) only if it fits, else rely on the end card; end = ONE line combining comment question + follow (Rota: "Gider miydin? Yaz, seriyi takip et." / Kokpit: "Sıradaki parça? Yaz, takip et."); end card 2–2.5 s. Closers may be shortened ("Rota'yı kaydet.").
+- **Loop:** the last line flows straight into the first line.
+- The timing marks in steps 1–4 below (8–40 s retain, 40–50 s reward) scale down proportionally: hook 0–1.5 s, stakes to ~5 s, retain to ~20 s, reward + ask in the last 5–8 s.
+- QA: total length ≤ 35 s; ≤ 3 facts. Log `"test": "length=<n>s"` in videos.json and compare % viewed with the older 50–70 s videos.
+1. **0.0–1.5 s HOOK — three layers fired at once**
+   - *Visual hook:* the most striking moving 3D/2D shot of the video, already in motion on frame 1. No logo intro, no slow fade-in.
+   - *Text hook:* 3–5 big words on screen (it must work with sound OFF — most Reels/TikTok views start muted).
+   - *Spoken hook* (Kallaway): **context lean** (topic clear in the first second) → **interjection** ("ama", "fakat", "oysa") → **contrarian snapback** (the surprising truth). E.g. "Uçak kanatları sabit görünür… ama uçuşta metrelerce yukarı esner."
+2. **1.5–8 s STAKES / PROBLEM** (StoryBrand): why the viewer (the hero) should care — their trip, their flight, their belief, their curiosity. One open loop: promise the answer to a question at the end.
+3. **8–40 s RETAIN — chained mini-rewards**: a new reveal, number or visual every 6–8 s; picture changes every 2–3 s; each mini-reward opens the next question (content-unit chaining). Show the guide's authority briefly (sources on screen, "NASA verisine göre") — Cialdini authority, Godin trust.
+4. **40–50 s REWARD**: pay the hook off fully and bigger than promised (the best reveal last). The awe moment.
+5. **ENGAGEMENT ASKS — REQUIRED IN EVERY VIDEO (the user's rule): like + comment + subscribe/follow.** Ask naturally, tied to the content, never as a generic "like and subscribe" dump:
+   - **Like (mid-video, ~60–70 %):** right after a strong mini-reward, one short spoken line + a small animated 👍 BEĞEN chip: e.g. "Bunu bilmiyorduysan bir beğeni bırak."
+   - **Comment (end):** a specific, easy question with options (Cialdini commitment): "A mı B mi? Yorumlara yaz" / "Sıradaki parça hangisi olsun?".
+   - **Subscribe / follow (end):** tied to identity + series: "Seri devam ediyor, kaçırmamak için abone ol" (YouTube) / "takip et" (Instagram). Spoken once; the voiceover may say "abone ol / takip et" together.
+   - **End card on screen (last 3–4 s):** animated buttons BEĞEN · YORUM YAP · ABONE OL / TAKİP ET + the @handle, in the channel's colours (Ayet already uses this card; build the same for Rota 360 and Kokpit 360 in overlays and reuse it).
+   - Keep the last sentence flowing back into the first line so the video still loops.
+   - Also in text: YouTube description ends with the comment question + "👍 Beğen · 💬 Yorum yap · 🔔 Abone ol"; Instagram caption ends with the question + "❤️ Beğen · 💬 Yorum yap · ➕ Takip et" (plus the share line).
+Voice: friendly, confident, 160–180 words/min feel; one idea per sentence; Turkish everyday words, no jargon without a picture.
+
+## 5. Platform rules
+**YouTube Shorts** — signals: viewed-vs-swiped-away, average % viewed, loops, likes/comments/shares, subs per view.
+- Title: keyword-first + curiosity (≤ 60 chars) — see RUNBOOK 7b. Title, first frame text and spoken hook say the same promise (packaging alignment — Aprilynne).
+- Description first line = the hook with the keyword; add the series playlist link once playlists exist.
+- After upload (when the tool allows), pin a comment that asks the CTA question and names the next episode of the series.
+- Subscribers come from series: end every video with the identity line + "Seriyi takip et".
+**Instagram Reels** — signals: watch time, **shares/DM sends** (strongest for reaching non-followers), saves, replays, follows from the Reel.
+- Design one share trigger per Reel: "Bunu … birine gönder" (practical value / social currency).
+- Caption = SEO: first line has the keyword and the hook (Instagram search indexes captions). **3–5 hashtags** only (1–2 broad like #keşfet #bilgi, 2–3 niche).
+- Cover frame: the same thumbnail template (title readable inside the centre square for the profile grid).
+- Original content only; never post a watermark from another app.
+
+## 5b. Thumbnail + cover
+UNIVERSAL RULE (user): one 9:16 master for BOTH Shorts and Reels, with headline + subject inside the centre 1080x1080 square; see RUNBOOK 7b step 6. — REQUIRED ON EVERY PUBLISH (the user's rule)
+No video goes out without its own thumbnail (YouTube, 1280×720) AND cover (Instagram, 1080×1920). How to make them: RUNBOOK 7b step 6 (`engine/thumb.py` from GitHub, free, made in code). Rules (Aprilynne Alter / packaging):
+- **One clear subject** from the video's strongest moment, rendered caption-free (`clean=1`); for countdowns a 3-image collage.
+- **Headline 2–4 words, huge**, white with ONE yellow word, thick outline; it promises the same thing as the title and the first frame (packaging alignment) but doesn't repeat the title word for word.
+- **Readable at phone size**: check at 160 px wide. Instagram cover: text inside the centre square so the profile grid crop still shows it.
+- **Same template per channel** (distinctive asset): same font, colours, @handle chip position.
+- YouTube: pass `thumbnail` on upload; if the channel isn't verified yet, the video still uploads — tell the user and set it later with `upload_video_thumbnail`. Instagram: post through the Graph API with `cover_url` (RUNBOOK section 8). Store both in the GitHub repo `thumbs/` and in the panel entry (`thumb`).
+- LOOK at both images full size before publishing; redo if the text covers the subject or is hard to read.
+
+## 6. Ethics = long-term trust (Godin: authentic stories; Cialdini: influence without tricks)
+No fake numbers, fake comments, fake "everyone is talking about" (social proof only when true), no fake scarcity, no clickbait the video doesn't pay off. Every fact checked against reliable sources; sources listed. For Ayet ve Bilim: Quran accuracy rules always win over any growth tactic.
+
+## 7. The growth loop (Hacking Growth: north star + high-tempo testing)
+- **North-star metric** per channel: *engaged views per day* (YouTube "engaged views" + Instagram plays) — with *subscribers/followers per 1,000 views* as the quality check.
+- **One test per week per channel**, changing ONE variable while the rest stays fixed (hook type, length 40 vs 55 s, series A vs B, CTA type, thumbnail text). Log `"test": "<variable>=<value>"` in each videos.json entry.
+- **Double down**: when a video beats the channel median by 2×, make the next video in the same series/format within 3 days.
+- Read the previous 7 entries of the channel in data/videos.json before choosing a topic; if any have stats, use them.
+
+## 8. Final checklist (QA the script and the finished video against it)
+- [ ] Topic inside the channel's positioning gap and series; ICE+STEPPS score written in the panel entry.
+- [ ] Frame 1 is moving and striking; text hook readable muted; spoken hook = context → "ama" → snapback, all within 1.5 s.
+- [ ] One open loop promised early and paid off last; a mini-reward every 6–8 s; picture changes every 2–3 s.
+- [ ] Viewer is the hero; channel speaks as a guide with sources.
+- [ ] One awe moment; one share trigger; LIKE ask mid-video + COMMENT question + SUBSCRIBE/FOLLOW ask at the end (spoken AND on the end card AND in the description/caption); the ending loops to the start.
+- [ ] Distinctive assets present: palette, logo corner, caption style, sonic logo, signature closer, series tag.
+- [ ] THUMBNAIL (1280×720) and INSTAGRAM COVER (1080×1920) made, checked full size, uploaded with the video; title/thumbnail/first frame promise the same thing; no clickbait; facts sourced.
+- [ ] Instagram caption: keyword first line, 3–5 hashtags, share/save CTA.
