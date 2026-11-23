@@ -756,7 +756,8 @@
    "id": "spider_web",
    "title": "Spider Web",
    "category": "zoology",
-   "url": "https://www.miracles-of-quran.com/spider_web.html"
+   "url": "https://www.miracles-of-quran.com/spider_web.html",
+   "used_by": "ayet-orumcek-agi"
   },
   {
    "id": "ants",
