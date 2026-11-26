@@ -46,11 +46,35 @@ kb.render_cli(P)
 Kit (`kb.py`): parts `light_aircraft(stage)` (1 profil · 2 spar+ribs · 3 wing skin · 4 frames+stringers · 5 fuselage skin · 6 tail · 7 engine+propeller · 8 landing gear · 9 canopy), `airfoil_slab`, `wing`, `ribs`, `spar`, `fuselage_frames`, `stringers`, `fuselage_skin`, `tail`, `engine_block`, `propeller`, `landing_gear`, `canopy`, `box`, `curve_obj`, `arrow`; animation `fly_in`, `scale_in`, `show/hide`, `fade` (alpha), `glow` (emission pulse on the part being explained), `spin`, `hinge`, `flow_lines` (glowing airflow dashes along polylines); cameras `shot`, `orbit_points` (depth of field on by default). Units = metres, +Y = nose, +Z = up.
 Rules: the part of the episode is visible in second 1; camera always moves; a new camera every line (1.5-3 s); the explained piece glows on its word; airflow/forces shown as `flow_lines` / `arrow`; studio stays dark navy with the teal blueprint grid (distinctive asset). If the episode needs a part the kit does not have (aileron, flap, fuel tank, pitot tube, instruments…), ADD a function to kb.py in the same style and commit kb.py to `engine/kokpit_blender/` with the video.
 
+## 3b. CINEMATIC LOOK — EVERY EPISODE (the user's rule since 2026-11-26)
+The user gave two style references: (1) a cinematic animated seaplane-chase sequence from a feature film — canary-yellow plane, turquoise sea, blue sky, puffy clouds, sweeping chase cams, low hero angles, wide lenses, prop blur, turbulence shake, a storm act, fast 2-4 s cuts; (2) the "Mechanic Vision 3D" aircraft-systems Shorts (fuel system 297K views, landing gear, jet engine) — realistic 3D, skin turns see-through to show the system inside, colour-coded glowing flows, small label pills. Borrow the STYLE only: our own aircraft, no film characters, names, logos, shots or music.
+Every video mixes TWO WORLDS, switched per line with `kb.look()`:
+- **SKY** (line 0 hook, line 1 series line, last 1-2 lines payoff): the FINISHED yellow plane flying over the sea — "this is what we are building". Low hero chase (lens 20-26, shake 0.05-0.08), wide banking shot (lens 32-40, `fly_motion` bank 12-20°), from-behind chase (shake 0.1). In the payoff the episode's part WORKS in flight (aileron deflects in the bank, gear retracts, flow lines over the wing...).
+- **STUDIO** (middle lines): the dark blueprint studio where this episode's part is built (stage plane). If the part is inside something, `kb.xray(skin, t0, t1)` turns the skin see-through (include the canopy). Flows colour-coded: fuel `glow_yellow`, air `glow_blue`/`glow_teal`, heat/exhaust `glow_red`, forces `arrow` orange. Max 2 `kb.label()` pills per shot, ≤3 Turkish words each, never in the caption zone.
+- Presets: `day` (default), `sunset` (finale / milestone episodes), `storm` + `kb.lightning([t,...])` (weather/safety topics only). One preset per video.
+```python
+import sys, os; sys.path.insert(0, os.path.expanduser('~/eng/kokpit_blender')); import kb
+P = os.path.dirname(os.path.abspath(__file__)); T = kb.Timeline(P); kb.setup(T.duration)
+S = kb.light_aircraft(stage=<stage>)            # studio: the build so far
+FP, root = kb.finished_plane()                   # sky: the finished plane
+kb.sky('day', speed=35, duration=T.duration)     # sea, clouds, sun (hidden until look())
+kb.sky_only(FP); kb.studio_only(S); kb.prop_blur(FP)
+n = len(T.lines); E = T.duration
+kb.look([(0, T.cut(2), 'sky'), (T.cut(2), T.cut(n-2), 'studio'), (T.cut(n-2), E, 'sky')])
+kb.fly_motion(T.cut(1), T.cut(2), bank=16)
+kb.shot(T.cut(0), (5.5, 7.5, -0.4), (4.5, 6.5, -0.2), (0, 0.5, 1.4), lens=22, shake=0.06)   # low hero chase
+kb.shot(T.cut(1), (16, -18, 8), (19, -13, 7), (0, 0, 1.2), lens=35)                          # wide bank
+# ... studio lines: fly_in / glow / xray / flow_lines / label (c = kb.shot(...); kb.label('Ana kiriş', anchor, offset, c, t0, t1))
+kb.shot(T.cut(n-2), (1.8, -12, 2.6), (1.2, -10, 2.3), (0, 1, 1.4), lens=35, shake=0.1)      # chase from behind
+kb.render_cli(P)
+```
+Render cost: sky frames ≈ 9-10 s each on 2 CPUs (motion blur + sea), studio ≈ 5-7 s. Keep sky ≤ 40 % of the video; render in chunks of **1.7 s** (≈ 40 frames, < 10 min each). A 30 s episode ≈ 75-95 min. Reference test: `kokpit360_yeni_gorunum_test.mp4` (2026-11-26).
+
 ## 4. QA BEFORE the long render (ONE image)
 Render 8 stills at the middle of 8 lines: `for t in <8 times>; do python3 scene.py --still $t review/s_$t.png; done` (~6 s each) and tile them into ONE 4x2 image (`ffmpeg -pattern_type glob -i 'review/s_*.png' -vf scale=270:480,tile=4x2 review/stills.jpg`). Look at that one image: subject in frame, nothing intersecting wrongly, not too dark/bright, nothing in the caption zone that matters (y 1330-1630 of 1920 = lower 30 %). Fix and re-check only changed shots.
 
-## 5. Render (Cycles CPU, 540x960, ~5-6 s per frame -> 30 s video ≈ 60-75 min)
-Render in foreground chunks of 3 s so each command ends inside the 10-min limit (timeout 600000), e.g. `python3 scene.py --render 0 3`, `--render 3 6`, … until the end (`T.duration`). Frames go to `frames/f_####.png`; existing frames are skipped, so a chunk that was cut off is simply run again. Never run two chunks at the same time (2 CPUs). Do not raise samples or resolution: compose.py upscales to 1080x1920 with lanczos + sharpening.
+## 5. Render (Cycles CPU, 540x960, ~5-10 s per frame -> 30 s video ≈ 75-95 min)
+Render in foreground chunks of 1.7 s (sky frames are slower) so each command ends inside the 10-min limit (timeout 600000), e.g. `python3 scene.py --render 0 1.7`, `--render 1.7 3.4`, … until the end (`T.duration`). Frames go to `frames/f_####.png`; existing frames are skipped, so a chunk that was cut off is simply run again. Never run two chunks at the same time (2 CPUs). Do not raise samples or resolution: compose.py upscales to 1080x1920 with lanczos + sharpening.
 
 ## 6. Sound, captions, video
 ```
