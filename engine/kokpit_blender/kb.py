@@ -541,6 +541,24 @@ def shot(t0, pos0, pos1, target=(0, 0, 1.3), lens=35, t1=None, target_to=None, d
     return o
 
 
+def path_shot(t0, points, lens=18, t1=None, look_ahead=0.6, shake=0.02, fstop=8.0):
+    """Fly-through camera (the viral 'travel with the fuel' shot): the camera glides along `points`
+    (polyline, e.g. the same path as flow_lines) looking a little ahead. Use once per video, 3-6 s."""
+    o = shot(t0, points[0], points[-1], points[min(1, len(points) - 1)], lens=lens, t1=t1, dof=True, fstop=fstop, shake=shake)
+    SHOTS[-1]['path'] = [Vector(p) for p in points]; SHOTS[-1]['look_ahead'] = look_ahead
+    return o
+
+
+def _along(pts, f):
+    L = [0.0]
+    for a, b in zip(pts, pts[1:]): L.append(L[-1] + (b - a).length)
+    d = max(0.0, min(1.0, f)) * L[-1]
+    for k in range(len(pts) - 1):
+        if L[k + 1] >= d:
+            return pts[k].lerp(pts[k + 1], (d - L[k]) / max(1e-6, L[k + 1] - L[k])), L[-1]
+    return pts[-1], L[-1]
+
+
 def _jit(seed, t, amp):
     """Smooth deterministic 3D jitter (sum of sines) for camera shake / turbulence."""
     s = seed * 1.618
@@ -555,6 +573,16 @@ def finalize_shots():
     for k, s in enumerate(SHOTS):
         t1 = s['t1'] or (SHOTS[k + 1]['t0'] if k + 1 < len(SHOTS) else end_t)
         o = s['cam']
+        if s.get('path'):
+            pts = s['path']; n = max(2, int((t1 + 0.1 - s['t0']) * 12)); _, total = _along(pts, 0)
+            for j in range(n + 1):
+                f = j / n; t = s['t0'] + (t1 + 0.1 - s['t0']) * f; e = f * f * (3 - 2 * f)
+                p, _ = _along(pts, e); q, _ = _along(pts, e + s['look_ahead'] / max(total, 1e-6))
+                if (q - p).length < 1e-4: q = p + (pts[-1] - pts[-2]).normalized()
+                _key(o, 'location', t, tuple(p + _jit(k + 1, t, s['shake'])), 'LINEAR')
+                _key(s['tg'], 'location', t, tuple(q), 'LINEAR')
+            mk = sc.timeline_markers.new(f'S{k}', frame=F(s['t0'])); mk.camera = o
+            continue
         if s.get('shake'):
             n = max(2, int((t1 + 0.1 - s['t0']) * 12)); p0, p1 = Vector(s['pos0']), Vector(s['pos1'])
             for j in range(n + 1):

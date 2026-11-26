@@ -64,10 +64,21 @@ kb.look([(0, T.cut(2), 'sky'), (T.cut(2), T.cut(n-2), 'studio'), (T.cut(n-2), E,
 kb.fly_motion(T.cut(1), T.cut(2), bank=16)
 kb.shot(T.cut(0), (5.5, 7.5, -0.4), (4.5, 6.5, -0.2), (0, 0.5, 1.4), lens=22, shake=0.06)   # low hero chase
 kb.shot(T.cut(1), (16, -18, 8), (19, -13, 7), (0, 0, 1.2), lens=35)                          # wide bank
+# kb.xray([FP["fuselage"], FP["wing"], FP["tail"], FP["canopy"]], 0, 0.05)  # hook: already cut open in frame 1
+# kb.path_shot(T.cut(k), [points along the flow path, ~0.3 m above it], lens=18)  # the fly-through
 # ... studio lines: fly_in / glow / xray / flow_lines / label (c = kb.shot(...); kb.label('Ana kiriş', anchor, offset, c, t0, t1))
 kb.shot(T.cut(n-2), (1.8, -12, 2.6), (1.2, -10, 2.3), (0, 1, 1.4), lens=35, shake=0.1)      # chase from behind
 kb.render_cli(P)
 ```
+**LESSONS FROM MECHANIC VISION 3D (5 aircraft Shorts watched with vidIQ, 2026-11-26) — apply every episode:**
+Hits: fuel system 297K views, fuel system remake 12.8K, landing gear 8K. Flops: "what is inside an airplane" 1.1K, "how a jet engine works" 813.
+1. TOPIC: a specific HIDDEN system people never see (fuel, landing gear, hydraulics, brakes, control cables) beats generic overviews ("what's inside a plane") and saturated topics (suck-squeeze-bang-blow jet engine). They remade the fuel system 4×; a winning topic can return as a deeper episode later.
+2. FIRST FRAME: the plane in the sky ALREADY cut open (`kb.xray(FP[...], 0, 0.05)`) with the system glowing inside, and the narration's hook starts at 0.0 s. Never open on a silent or plain shot (the jet-engine flop had 2.5 s of silence). Avoid the cliché "Hiç merak ettin mi…" opener; open with the oddity/number (PLAYBOOK).
+3. JOURNEY: follow ONE thing from start to end (a fuel drop: tank → pump → filter → nozzle → flame; a force: stick → cable → aileron). One 3-6 s `kb.path_shot()` fly-through along the same path as the `flow_lines` — the shot viewers remember.
+4. PACE ≈ 3 cuts per 10 s (2 s shots), plus the one longer fly-through. A sound cue on every beat (whoosh, hiss, clunk, roar).
+5. COLOURS: fuel amber/yellow, air blue, heat red/orange, hydraulics/electric teal; max 2 label pills per shot.
+6. END: back in the sky, the system glowing while the plane flies, one summary line + next-part question over the moving picture. Never a static/black end card, no real-life stock footage (style break, rights).
+
 Render cost: sky frames ≈ 9-10 s each on 2 CPUs (motion blur + sea), studio ≈ 5-7 s. Keep sky ≤ 40 % of the video; render in chunks of **1.7 s** (≈ 40 frames, < 10 min each). A 30 s episode ≈ 75-95 min. Reference test: `kokpit360_yeni_gorunum_test.mp4` (2026-11-26).
 
 ## 4. QA BEFORE the long render (ONE image)
