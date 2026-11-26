@@ -6,6 +6,8 @@
 
 **FIRST read PLAYBOOK.txt (growth playbook). Apply its positioning, series, script anatomy, distinctive assets and checklist to every video (Quran accuracy rules always win).**
 
+**UPDATES 2026-11-26 (the user's rules):** (1) After approval publish to YouTube AND Instagram @ayet.bilim (IG_ID 17841480919170318, Zapier Instagram for Business Graph API with cover_url, RUNBOOK.txt section 8.3) - only if META_COMPLIANCE.txt passes. (2) Thumbnail/cover = `thumbkit.py` with a flat SVG icon of the topic (like engine/thumb_refs/ayetbilim_orumcek_cover.png, glow #1E4E8C or a colour that fits), headline 2-5 words with one *yellow word. (3) The repo is attached to the scheduled task, so the repo upload before approval works.
+
 # Ayet ve Bilim: runbook for each daily run
 
 Each run makes ONE Turkish 2D short (~55-60 s, 9:16) for the **Ayet ve Bilim** channel (YouTube @AyetveBilim-c6k · Instagram @ayet.bilim), sends it to the user for approval and stops. **Never upload or post anything until the user explicitly approves in the conversation.** When they approve, publish IMMEDIATELY in that same conversation per RUNBOOK.txt section 8 (no slot, no send_later). Never ask the user to connect the repo or to send the video: call add_repo yourself, and if the local files are gone, download `videos/<slug>_final.mp4`, `videos/<slug>_thumb.jpg` and `videos/<slug>_cover.jpg` from the panel with artifacts read_file (paths). Free: Gemini TTS (AI voice), code-drawn 2D visuals, no AI images.
@@ -40,4 +42,4 @@ Render settings: `SOFTWARE_GL=1 QS='&res=0.3&aa=0&shadow=256'` (2D: the 3D engin
 Deliver: add to the panel (publish_files patch; copy files to /mnt/user-data/outputs/panel first; videos.json entry with `"channel": "Ayet ve Bilim"`), SendUserFile the MP4 (status proactive) with: the verse (Arabic + meal + reference) to verify, the sources, a title, a caption ending with a question, 6-8 hashtags (#ayetvebilim #kuran #bilim #shorts #reels #keşfet …). and ask: "Videoyu izledin mi? Onaylıyor musun? Onaylarsan hemen YouTube ve Instagram'a yüklerim." Do not upload before approval. Also put `videos/<slug>_final.mp4`, `videos/<slug>_thumb.jpg` and `videos/<slug>_cover.jpg` in the panel so publishing works even if the workspace was reset.
 
 ## SEO publish kit
-Before sending the video to the user, follow RUNBOOK.txt section 7b (keyword, title, description, tags, Instagram caption, code-made thumbnail) and show all of it in the approval message.
+Before sending the video to the user, follow RUNBOOK.txt section 7b (keyword, title, description, tags, Instagram caption, thumbkit.py thumbnail + cover) and META_COMPLIANCE.txt and show all of it in the approval message.

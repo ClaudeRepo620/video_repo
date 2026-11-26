@@ -1,3 +1,5 @@
+**2026-11-26: META_COMPLIANCE.txt applies to every Reel (Instagram accounts were restricted before). Engagement asks must be genuine questions, never bait ("etiketle", "paylaş ki", "EVET yaz"). Thumbnails/covers: thumbkit.py template (engine/thumb_refs).**
+
 # GROWTH PLAYBOOK — Rota 360 · Kokpit 360 · Ayet ve Bilim
 Every daily run reads this BEFORE choosing a topic and writing the script, and checks the finished video against the checklist at the end.
 Built from the user's sources: Positioning (Ries & Trout), This Is Marketing + All Marketers Are Liars (Godin), Building a StoryBrand (Miller), Contagious (Berger), Crossing the Chasm (Moore), Hacking Growth (Ellis & Brown), How Brands Grow (Sharp), Influence (Cialdini), The Unified Laws of Marketing deck, and the creators Kallaway, Aprilynne Alter, Alex Hormozi, Dave Jeltema, Think Media, Nate Black, Nathan (bluprint), heyDominik, Millie Adrian, Jade Beason, Henbu, Steven Wommack, Allison Baek, mikirai, Alex Cattoni, Ethan Shaw, Pat Flynn, OnPointFresh, Adam Erhart.
@@ -12,8 +14,8 @@ Use the IDEAS only; never copy any book's or creator's wording, script or shots.
 ## 1. Positioning — the word each channel owns
 | Channel | The gap we own (say it the same way everywhere) | Beachhead audience | Identity line ("people like us…") |
 |---|---|---|---|
-| **Rota 360** | "Dünyanın en şaşırtıcı yerlerini **3D** gezdiren Türkçe kanal" | 18–35, dreams of travelling, saves places for "one day" | "Rota ekibi gitmeden önce bilir." |
-| **Kokpit 360** | "Uçağın **içini açıp** gösteren kanal — uçak neden böyle?" | Curious flyers, aviation fans, students | "Kokpit ekibi uçağa binince farkı görür." |
+| **Rota 360** | "Dünyanın **gizemli, kutsal ve kayıp** yerlerini **2D** anlatan Türkçe kanal" (since 2026-11-26) | 18–35, curious about mysteries, sacred places, old maps, pirates and ancient cities | "Rota ekibi efsaneyi de gerçeği de bilir." |
+| **Kokpit 360** | "Bir uçağı **sıfırdan, parça parça** yapan kanal — uçak neden böyle?" | Curious flyers, aviation fans, students | "Kokpit ekibi uçağa binince farkı görür." |
 | **Ayet ve Bilim** | "Ayet + bilim, **kaynaklı ve dürüst**" | Believers who love science and want trustworthy, shareable content | "Biz okuruz, araştırırız, paylaşırız." |
 Rules: every title, bio line, description first line and CTA reinforces the gap. Don't drift into other niches (Moore: win the beachhead before expanding). Each channel stays inside its gap for at least 90 days.
 
@@ -23,8 +25,8 @@ For each channel keep FIXED: colour palette, the logo mark in the same corner, c
 - Kokpit 360 opener style: "Uçağa binen herkes bunu görür ama…" Closer: "Sıradaki parça hangisi? Yorumlara yaz."
 - Ayet ve Bilim opener style: a scientific fact framed as a question. Closer: "Kaynaklar açıklamada. Bunu bilmesi gereken birine gönder."
 Series names (recognisable formats, Contagious "Public"): always put the series tag on the first frame and in the title.
-- Rota 360: **"Haritada Yok"** (hidden places), **"Gitmeden Bil"** (practical tips), **"Dünyanın En…"** (countdowns), **"Türkiye'nin Gizli Cenneti"**.
-- Kokpit 360: **"Uçakta Neden?"**, **"Pilotların Bildiği"**, **"Parça Parça Uçak"** (one part per episode, numbered).
+- Rota 360 (since 2026-11-26, engine/rota_topics.json): **"Gizemli Yerler"**, **"Kutsal Mekanlar"**, **"Kayıp Kıtalar"**, **"Korsan Rotaları"**, **"Eski Haritalar"**, **"Okyanusu Geçmek"**, **"İstanbul'un Sırları"**, **"Kadim Şehirler"**. Legends always end with the honest evidence ("iddia vs kanıt").
+- Kokpit 360: **"Sıfırdan Uçak #N"** (since 2026-11-26: how an airplane is built from scratch, one part per episode, Blender 3D, engine/kokpit_build_series.json). Old series only on request.
 - Ayet ve Bilim: **"Ayet ve Bilim #N"** numbered, plus the miracles-of-quran.com category as subtitle (Astronomi, Jeoloji, Fizyoloji…).
 
 ## 3. Topic choice — score every idea (Hacking Growth ICE + Contagious STEPPS)

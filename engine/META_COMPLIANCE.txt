@@ -1,0 +1,53 @@
+META (INSTAGRAM + FACEBOOK) COMPLIANCE CHECK - every Reel, every channel (the user's rule since 2026-11-26)
+The user's Instagram accounts (@ayet.bilim, @kokp.it360, @rota.360tr) were restricted before and are active again.
+A ban kills the channel, so a video that fails ANY line below is NOT posted to Instagram (fix it, or post to YouTube only
+and tell the user which line failed). Policy source: Meta Community Standards (transparency.meta.com/policies/community-standards),
+Instagram Recommendations Guidelines and Original Content Guidelines (creators.instagram.com/original-content-guidelines).
+Meta changes these rules; if a Graph API error, a warning in Account Status or a removed Reel appears, stop posting to
+that account and tell the user the exact message.
+
+A. CONTENT (Community Standards)
+ 1. Violence & graphic content: no blood, wounds, dead bodies, executions, torture, accident/crash footage or victims.
+    Pirates: battles shown only as ships, maps, cannons smoke from far away - never people being hurt; no "walking the plank" scenes with a person.
+    Disasters (Port Royal, Pompeii, earthquakes): no bodies, no suffering people, no sensational death counts in the hook.
+ 2. Hateful conduct: never mock, insult or stereotype any religion, prophet, ethnicity, nationality or group. Sacred places
+    (Kâbe, Mescid-i Aksa, Vatikan, Ayasofya, Uluru, Kailash, temples, churches, synagogues) are shown with respect;
+    no jokes about faith; AyetBilim never attacks other faiths.
+ 3. Religious imagery: no depictions of prophets, sacred figures or faces (Islamic sensitivity + safest for all faiths).
+ 4. Dangerous organisations & individuals: no praise or symbols of designated groups. Pirates are presented as HISTORY
+    (who, where, when, what archaeology found), never as heroes to copy. No modern piracy/terror groups at all.
+ 5. Misinformation: no false health claims, no "energy cures", no conspiracy theories (hidden Antarctica bases, aliens
+    built the pyramids, fake disasters). Legends (ley lines, Mu, Atlantis, Bermuda, Piri Reis-Antarctica) are always
+    framed "iddia vs kanıt" with the evidence stated plainly. Every number checked with 2 reliable sources.
+ 6. Politics: no current conflicts, elections, borders or ownership disputes (Jerusalem, Tibet, Ayasofya's status,
+    Cyprus...). History and architecture only.
+ 7. Adult content: none (no nudity, including in paintings/statues - choose another subject or crop).
+ 8. Regulated goods & dangerous acts: no weapons how-to, no "build your own plane and fly it" (Kokpit: education only),
+    no drugs/alcohol focus, no dangerous challenges.
+ 9. Children: never show identifiable children; no content aimed at sexualising or targeting minors (obviously).
+
+B. ORIGINALITY + INTELLECTUAL PROPERTY
+ 10. 100 % our own: every frame made in code/Blender; never re-upload or clip another creator's video, film, game,
+     documentary, map scan or photo. No watermarks/logos of other apps (TikTok, CapCut, YouTube) in the video.
+ 11. No film/TV/game characters or look-alikes (e.g. no characters, ships or logos from pirate films; say "filmlerdeki
+     korsanlar" generically at most). No brand logos on aircraft (generic trainer, no Cessna/Boeing logos).
+ 12. Music: only the pool tracks in the panel (Pixabay licence) or the code-made bed. Never a chart song or film score.
+ 13. Fonts: Poppins (OFL) from engine/fonts - free for commercial use.
+
+C. AUTHENTIC BEHAVIOUR / SPAM (Meta Inauthentic Behaviour + Spam policies)
+ 14. One Reel per account per run; never post the same video to two of the user's accounts.
+ 15. Captions: 3-5 hashtags only (Rota's playbook line "10-15 hashtags" is overridden: max 5), no hashtag stuffing,
+     no unrelated trending tags, no links in captions, no "follow for follow".
+ 16. Engagement-bait wording is demoted: never "beğen eğer...", "1 milyon beğeni", "etiketle", "paylaş ki görsün",
+     "yorumlara EVET yaz". Ask ONE genuine question about the topic instead ("Sen hangisini görmek isterdin?").
+     A soft "takip et" / "kaydet" once is fine.
+ 17. Never use fake engagement, follow/unfollow, bought likes, or comment bots. Do not auto-comment.
+ 18. Titles/captions must match the video (no clickbait the video does not pay off).
+
+D. BEFORE POSTING (write the result into the panel entry as "meta_check": "ok" or the failed line numbers)
+ [ ] A1-A9 content checked against the script AND the 4x4 contact sheet
+ [ ] B10-B13 originality/IP
+ [ ] C14-C18 caption + hashtags
+ [ ] Cover image = thumbkit.py output (our own design, no third-party images)
+If an Instagram Graph API call returns an error mentioning policy, restriction, spam or "action blocked": do NOT retry,
+do NOT post to another account instead; tell the user the exact error text.

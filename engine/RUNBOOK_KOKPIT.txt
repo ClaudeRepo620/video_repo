@@ -2,17 +2,70 @@
 
 **AUDIO (every video, no exceptions): follow RUNBOOK.txt section 6b — background music from the pool (never louder than the voice) and the WHOLE final audio, music included, tuned to A = 432 Hz with finish_audio.sh. Upload only the _final.mp4.**
 
-**Load engine files from GitHub as RUNBOOK.txt section 0 says (curl into ~/eng; never read a bundle into the chat).**
+**FIRST read PLAYBOOK.txt (growth playbook) and META_COMPLIANCE.txt. RUNBOOK.txt (its 2026-11-26 update block + sections 5-8) applies for QA, music, delivery, SEO kit and publishing.**
 
-**FIRST read PLAYBOOK.txt (growth playbook). Apply its positioning, series, script anatomy, distinctive assets and checklist to every video.**
+# Kokpit 360: runbook for each run (BLENDER EDITION, the user's rule since 2026-11-26)
 
-# Kokpit 360: runbook for each daily run
+Each run makes ONE Turkish 3D short (**25-35 s, hard cap 35 s**, 70-95 words, ONE part, max 3 facts; 9:16) for **Kokpit 360** (YouTube @Kokpit360-j1y · Instagram @kokp.it360) in the series **"SIFIRDAN UÇAK"**: how an airplane is built from scratch, one part per episode, the same aircraft growing every episode. High-quality 3D is rendered with **Blender (bpy, Cycles)**. Publish immediately after QA (YouTube + Instagram), no approval needed. Free: Gemini TTS, Blender, no AI images.
 
-Each run makes ONE Turkish 3D short (**25-35 s, hard cap 35 s**, 70-95 words, ONE part, max 3 facts — PLAYBOOK 4a, the user's rule since 2026-11-23: "25–35 s, not the old 60 s"; 9:16) for **Kokpit 360** (YouTube @Kokpit360-j1y · Instagram @kokp.it360): fun, curious aviation engineering ("uçağın parçaları nasıl çalışır?"), publishes it immediately, and stops. **PUBLISH IMMEDIATELY (the user's rule since 2026-11-20: "publish whenever you make it").** When QA passes, publish in the SAME run per RUNBOOK.txt section 8 — no approval, no time slot, no send_later. Never ask the user to connect the repo, send the video or approve. Only a failed QA stops publishing (then send the MP4 and say what failed). Free: Gemini TTS, code-built 3D, no AI images.
+## 0. Load (5 min)
+```
+mkdir -p ~/eng/fonts ~/eng/kokpit_blender && cd ~/eng && R=https://raw.githubusercontent.com/ClaudeRepo620/video_repo/main/engine
+for f in RUNBOOK.txt RUNBOOK_KOKPIT.txt PLAYBOOK.txt META_COMPLIANCE.txt kokpit_bundle.sh finish_audio.sh thumbkit.py kokpit_build_series.json kokpit_sources.json kokpit_blender/kb.py kokpit_blender/compose.py fonts/Poppins-ExtraBold.ttf; do curl -fsSL -o $f $R/$f || echo FAIL $f; done
+pip install --break-system-packages -q bpy   # Blender as a Python module (~15 s, ~400 MB)
+python3 -c "import bpy; print(bpy.app.version_string)"
+```
+Read ONLY RUNBOOK_KOKPIT.txt, RUNBOOK.txt (update block + sections 5-8), PLAYBOOK.txt, META_COMPLIANCE.txt, kokpit_build_series.json. Never read kokpit_bundle.sh. Panel: read only data/videos.json (+ music with read_file paths).
+Project (only for the voice + mixer tools): `bash $SKILL/scripts/new_video.sh deep-dive <slug> && bash ~/eng/kokpit_bundle.sh ~/faceless-shorts/<slug>` (SKILL = anthropic-skills:faceless-shorts). Google key -> `~/.faceless-shorts/google_api_key`, check the 200 as RUNBOOK.txt says.
 
-Everything in RUNBOOK.txt (the travel runbook, engine/RUNBOOK.txt in the GitHub repo) applies: load, voice, QA, render, deliver. Differences:
-- Engine: `~/eng/kokpit_bundle.sh` from GitHub (run it, don't read it) (it adds `src/core/aero.js`: `turbofan(E)` cutaway engine with spinning fan/compressor/turbine, glowing combustor and airflow particles; `bladeScene(E)` cooled turbine blade; plus `flight(E)` airliner over clouds from world.js). Build new aviation sets in aero.js in the same style (dark blueprint studio, cyan/yellow HUD accents, clipped cutaways with `clippingPlanes`).
-- **Topics come ONLY from `~/eng/kokpit_sources.json` (the user's rule since 2026-11-23: "make the Kokpit 360 videos from those sources from now on").** It is a bank built from the user's 5 sources: Introduction to Flight (Anderson & Bowden), FAA Pilot's Handbook of Aeronautical Knowledge, The Simple Science of Flight (Tennekes), Understanding Flight (Anderson & Eberhardt) and the Kokpit 360 trivia style. Download it with the other engine files. Read its how_to_use and accuracy_notes, then pick ONE topic without used_by (priority 1 first, no two in a row from the same series, respect avoid_overlap; skip the 10-idea brainstorm — score only 3 bank candidates). Use its hook as the starting line and its facts (max 3), but still confirm every number with 2 reliable web sources and cut what fails. script.json "sources" = the book(s) by full name + the web sources. Never copy the books' wording. After the video, set used_by=<slug> in kokpit_sources.json and commit it to engine/ with the video. A viewer request passed on by the user still goes first.
-- Tone: playful and clear (male voice only: "Puck" or "Fenrir", style "[excited]"), numbered steps ("1 · EMER"), one "SORUN → ÇÖZÜM" turn, end with "SIRADAKİ PARÇA?" options as comment bait and `@kokp.it360`.
-- Look: `LOOK = { bloom 0.3, bloomThreshold 0.9, exposure 0.85 }`; studio scenes overexpose easily: keep casings mid-grey, emissive ≤ 1.4, point lights ≤ 6. QA in ONE 4×4 grid (RUNBOOK.txt section 5).
-- Panel entry `"channel": "Kokpit 360"`, format "YAYINDA" with the youtube and instagram links.
+## 1. Topic = next episode
+Open `~/eng/kokpit_build_series.json`; take the FIRST episode without `used_by` (build order). Its `stage` is how far the aircraft is built. A viewer request passed on by the user goes first. Confirm every fact with 2 reliable sources (FAA handbooks, NASA Glenn, EAA, manufacturer data); cut what fails. Sources go in script.json "sources". Education only (series `safety_note`).
+
+## 2. Script (Turkish, 10-14 lines, 70-95 words)
+- Line 0 = the episode hook (oddity / reveal first, PLAYBOOK Kokpit rules). Line 1 names the series: "Sıfırdan uçak yapıyoruz, bölüm <n>: <part>." (short).
+- One SORUN → ÇÖZÜM turn, max 3 facts, numbers written as spoken, `caps` with exactly one `*yellow` word per chunk and `{spoken}` anchors before digits.
+- Last line = forward reference + ask: "Sıradaki parça: <next part>. Yaz, takip et."
+- script.json keys as RUNBOOK.txt section 2 (voice Puck/Fenrir/Orus/Charon, style one tag like "[excited]", music "none" when a pool track is used).
+Voice: `python3 tools/voice_google.py .` -> data/narration.wav, data/lines.json, data/words.json.
+
+## 3. Build the Blender scene: `scene.py` in the project folder
+```python
+import sys, os; sys.path.insert(0, os.path.expanduser('~/eng/kokpit_blender')); import kb
+P = os.path.dirname(os.path.abspath(__file__)); T = kb.Timeline(P); kb.setup(T.duration)
+A = kb.light_aircraft(stage=<stage>)          # everything built in earlier episodes + this one
+# THIS episode's part arrives / moves on its words:
+kb.fly_in(A['ribs'], T.cut(3), T.cut(3) + 1.4, (0, 0, 2.5), stagger=0.03)
+kb.glow(A['spar'], T.word('kiriş', 2))
+# one camera per line, always moving, cut at T.cut(i):
+kb.shot(T.cut(0), (7, -9, 4.5), (9, -7, 4), (0, -0.5, 1.3), lens=30)
+p0, p1 = kb.orbit_points((0, -0.5, 1.3), 10, 3, -30, 20); kb.shot(T.cut(1), p0, p1, (0, -0.5, 1.3), lens=32)
+if '--hero' in sys.argv:                       # thumbnail subject (transparent PNG)
+    kb.hero_render(A['spar'] + A['ribs'], os.path.join(P, 'review/hero.png'), (6, -6, 4), (2.5, 0, 1.5)); sys.exit()
+kb.render_cli(P)
+```
+Kit (`kb.py`): parts `light_aircraft(stage)` (1 profil · 2 spar+ribs · 3 wing skin · 4 frames+stringers · 5 fuselage skin · 6 tail · 7 engine+propeller · 8 landing gear · 9 canopy), `airfoil_slab`, `wing`, `ribs`, `spar`, `fuselage_frames`, `stringers`, `fuselage_skin`, `tail`, `engine_block`, `propeller`, `landing_gear`, `canopy`, `box`, `curve_obj`, `arrow`; animation `fly_in`, `scale_in`, `show/hide`, `fade` (alpha), `glow` (emission pulse on the part being explained), `spin`, `hinge`, `flow_lines` (glowing airflow dashes along polylines); cameras `shot`, `orbit_points` (depth of field on by default). Units = metres, +Y = nose, +Z = up.
+Rules: the part of the episode is visible in second 1; camera always moves; a new camera every line (1.5-3 s); the explained piece glows on its word; airflow/forces shown as `flow_lines` / `arrow`; studio stays dark navy with the teal blueprint grid (distinctive asset). If the episode needs a part the kit does not have (aileron, flap, fuel tank, pitot tube, instruments…), ADD a function to kb.py in the same style and commit kb.py to `engine/kokpit_blender/` with the video.
+
+## 4. QA BEFORE the long render (ONE image)
+Render 8 stills at the middle of 8 lines: `for t in <8 times>; do python3 scene.py --still $t review/s_$t.png; done` (~6 s each) and tile them into ONE 4x2 image (`ffmpeg -pattern_type glob -i 'review/s_*.png' -vf scale=270:480,tile=4x2 review/stills.jpg`). Look at that one image: subject in frame, nothing intersecting wrongly, not too dark/bright, nothing in the caption zone that matters (y 1330-1630 of 1920 = lower 30 %). Fix and re-check only changed shots.
+
+## 5. Render (Cycles CPU, 540x960, ~5-6 s per frame -> 30 s video ≈ 60-75 min)
+Render in foreground chunks of 3 s so each command ends inside the 10-min limit (timeout 600000), e.g. `python3 scene.py --render 0 3`, `--render 3 6`, … until the end (`T.duration`). Frames go to `frames/f_####.png`; existing frames are skipped, so a chunk that was cut off is simply run again. Never run two chunks at the same time (2 CPUs). Do not raise samples or resolution: compose.py upscales to 1080x1920 with lanczos + sharpening.
+
+## 6. Sound, captions, video
+```
+python3 ~/eng/kokpit_blender/compose.py . cues                     # data/cues.json
+python3 tools/mix.py .                                             # data/mix.wav (voice + sound effects)
+python3 ~/eng/kokpit_blender/compose.py . ass "SIFIRDAN UÇAK #<n>" # captions.ass (+ series tag, end card)
+python3 ~/eng/kokpit_blender/compose.py . video renders/<slug>.mp4
+ffmpeg -i renders/<slug>.mp4 -c:v libx264 -crf 24 -preset slow -c:a aac -b:a 160k -movflags +faststart renders/<slug>_web.mp4
+bash ~/eng/finish_audio.sh renders/<slug>_web.mp4 renders/<slug>_final.mp4 <music file|none> -25
+```
+QA the final MP4 with ONE 4x4 grid + ffprobe (RUNBOOK.txt section 5.6): length 25-35 s, audio present, captions readable, one yellow word, end card visible.
+
+## 7. Thumbnail + cover (the user's template)
+`python3 scene.py --hero` -> review/hero.png (transparent, only this episode's part), then
+`python3 ~/eng/thumbkit.py thumbs/<slug> "<2-5 WORD HOOK, ONE *YELLOW>" review/hero.png --glow "#E2551B"` (orange for engine/heat/forces, `#2BB3C0` teal for structure/airflow). Look at both files once.
+
+## 8. Publish + record
+META_COMPLIANCE.txt check -> RUNBOOK.txt section 8 (repo: videos/<slug>.mp4, thumbs/<slug>_cover.jpg + _thumb.jpg, engine/kokpit_build_series.json with used_by=<slug>, kb.py if changed; YouTube category 28; Instagram @kokp.it360 with cover_url). Description adds "Eğitim amaçlıdır." Panel entry `"channel": "Kokpit 360"`, format "YAYINDA", `"series": "Sıfırdan Uçak #<n>"`, `"test": "length=<n>s"`, `"meta_check"`, youtube + instagram links. Send the user the MP4 + one message (title, caption, hashtags, links, sources). If anything blocked, say exactly what.
