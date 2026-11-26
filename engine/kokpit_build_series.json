@@ -25,7 +25,8 @@
     "Example to verify: a two-seat trainer like the Cessna 152 has a max takeoff weight around 757 kg (1,670 lb).",
     "Every extra kilogram needs more lift, so more wing area or more speed."
    ],
-   "visual": "stage 1 builds nothing yet: show the COMPLETE aircraft as a ghost (A=kb.light_aircraft(stage=9); kb.fade(A, 0, 0.1, 0.12, 0.12)) on the blueprint floor as the series promise, a balance-scale made with kb.box/curve_obj, weight numbers in captions; the hero render for the thumbnail = the ghost aircraft at full opacity"
+   "visual": "stage 1 builds nothing yet: show the COMPLETE aircraft as a ghost (A=kb.light_aircraft(stage=9); kb.fade(A, 0, 0.1, 0.12, 0.12)) on the blueprint floor as the series promise, a balance-scale made with kb.box/curve_obj, weight numbers in captions; the hero render for the thumbnail = the ghost aircraft at full opacity",
+   "used_by": "kokpit-sifirdan-01"
   },
   {
    "n": 2,
